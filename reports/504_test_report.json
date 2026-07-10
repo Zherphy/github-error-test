@@ -1,0 +1,987 @@
+[
+  {
+    "round": 1,
+    "concurrency": 5,
+    "timeout": 30,
+    "wall_time": 7.04,
+    "ok": 5,
+    "failed": 0,
+    "timed_out": 0,
+    "avg_elapsed": 4.82,
+    "max_elapsed": 7.04,
+    "results": [
+      {
+        "idx": 0,
+        "success": true,
+        "timed_out": false,
+        "elapsed": 7.04,
+        "exit_code": 0,
+        "stderr_tail": "Cloning into '/tmp/sglang_504_r1/clone_0'...\n"
+      },
+      {
+        "idx": 1,
+        "success": true,
+        "timed_out": false,
+        "elapsed": 4.13,
+        "exit_code": 0,
+        "stderr_tail": "Cloning into '/tmp/sglang_504_r1/clone_1'...\n"
+      },
+      {
+        "idx": 2,
+        "success": true,
+        "timed_out": false,
+        "elapsed": 4.3,
+        "exit_code": 0,
+        "stderr_tail": "Cloning into '/tmp/sglang_504_r1/clone_2'...\n"
+      },
+      {
+        "idx": 3,
+        "success": true,
+        "timed_out": false,
+        "elapsed": 4.82,
+        "exit_code": 0,
+        "stderr_tail": "Cloning into '/tmp/sglang_504_r1/clone_3'...\n"
+      },
+      {
+        "idx": 4,
+        "success": true,
+        "timed_out": false,
+        "elapsed": 3.83,
+        "exit_code": 0,
+        "stderr_tail": "Cloning into '/tmp/sglang_504_r1/clone_4'...\n"
+      }
+    ]
+  },
+  {
+    "round": 2,
+    "concurrency": 10,
+    "timeout": 20,
+    "wall_time": 13.5,
+    "ok": 10,
+    "failed": 0,
+    "timed_out": 0,
+    "avg_elapsed": 7.98,
+    "max_elapsed": 13.49,
+    "results": [
+      {
+        "idx": 0,
+        "success": true,
+        "timed_out": false,
+        "elapsed": 6.31,
+        "exit_code": 0,
+        "stderr_tail": "Cloning into '/tmp/sglang_504_r2/clone_0'...\n"
+      },
+      {
+        "idx": 1,
+        "success": true,
+        "timed_out": false,
+        "elapsed": 9.86,
+        "exit_code": 0,
+        "stderr_tail": "Cloning into '/tmp/sglang_504_r2/clone_1'...\n"
+      },
+      {
+        "idx": 2,
+        "success": true,
+        "timed_out": false,
+        "elapsed": 6.59,
+        "exit_code": 0,
+        "stderr_tail": "Cloning into '/tmp/sglang_504_r2/clone_2'...\n"
+      },
+      {
+        "idx": 3,
+        "success": true,
+        "timed_out": false,
+        "elapsed": 6.3,
+        "exit_code": 0,
+        "stderr_tail": "Cloning into '/tmp/sglang_504_r2/clone_3'...\n"
+      },
+      {
+        "idx": 4,
+        "success": true,
+        "timed_out": false,
+        "elapsed": 4.11,
+        "exit_code": 0,
+        "stderr_tail": "Cloning into '/tmp/sglang_504_r2/clone_4'...\n"
+      },
+      {
+        "idx": 5,
+        "success": true,
+        "timed_out": false,
+        "elapsed": 8.11,
+        "exit_code": 0,
+        "stderr_tail": "Cloning into '/tmp/sglang_504_r2/clone_5'...\n"
+      },
+      {
+        "idx": 6,
+        "success": true,
+        "timed_out": false,
+        "elapsed": 10.88,
+        "exit_code": 0,
+        "stderr_tail": "Cloning into '/tmp/sglang_504_r2/clone_6'...\n"
+      },
+      {
+        "idx": 7,
+        "success": true,
+        "timed_out": false,
+        "elapsed": 9.03,
+        "exit_code": 0,
+        "stderr_tail": "Cloning into '/tmp/sglang_504_r2/clone_7'...\n"
+      },
+      {
+        "idx": 8,
+        "success": true,
+        "timed_out": false,
+        "elapsed": 13.49,
+        "exit_code": 0,
+        "stderr_tail": "Cloning into '/tmp/sglang_504_r2/clone_8'...\n"
+      },
+      {
+        "idx": 9,
+        "success": true,
+        "timed_out": false,
+        "elapsed": 5.15,
+        "exit_code": 0,
+        "stderr_tail": "Cloning into '/tmp/sglang_504_r2/clone_9'...\n"
+      }
+    ]
+  },
+  {
+    "round": 3,
+    "concurrency": 20,
+    "timeout": 15,
+    "wall_time": 15.17,
+    "ok": 15,
+    "failed": 5,
+    "timed_out": 5,
+    "avg_elapsed": 11.19,
+    "max_elapsed": 15.04,
+    "results": [
+      {
+        "idx": 0,
+        "success": true,
+        "timed_out": false,
+        "elapsed": 9.98,
+        "exit_code": 0,
+        "stderr_tail": "Cloning into '/tmp/sglang_504_r3/clone_0'...\n"
+      },
+      {
+        "idx": 1,
+        "success": true,
+        "timed_out": false,
+        "elapsed": 11.0,
+        "exit_code": 0,
+        "stderr_tail": "Cloning into '/tmp/sglang_504_r3/clone_1'...\n"
+      },
+      {
+        "idx": 2,
+        "success": false,
+        "timed_out": true,
+        "elapsed": 15.04,
+        "exit_code": -1,
+        "stderr_tail": "Cloning into '/tmp/sglang_504_r3/clone_2'...\n"
+      },
+      {
+        "idx": 3,
+        "success": true,
+        "timed_out": false,
+        "elapsed": 13.65,
+        "exit_code": 0,
+        "stderr_tail": "Cloning into '/tmp/sglang_504_r3/clone_3'...\n"
+      },
+      {
+        "idx": 4,
+        "success": true,
+        "timed_out": false,
+        "elapsed": 14.23,
+        "exit_code": 0,
+        "stderr_tail": "Cloning into '/tmp/sglang_504_r3/clone_4'...\n"
+      },
+      {
+        "idx": 5,
+        "success": true,
+        "timed_out": false,
+        "elapsed": 5.47,
+        "exit_code": 0,
+        "stderr_tail": "Cloning into '/tmp/sglang_504_r3/clone_5'...\n"
+      },
+      {
+        "idx": 6,
+        "success": true,
+        "timed_out": false,
+        "elapsed": 5.49,
+        "exit_code": 0,
+        "stderr_tail": "Cloning into '/tmp/sglang_504_r3/clone_6'...\n"
+      },
+      {
+        "idx": 7,
+        "success": false,
+        "timed_out": true,
+        "elapsed": 15.03,
+        "exit_code": -1,
+        "stderr_tail": "Cloning into '/tmp/sglang_504_r3/clone_7'...\n"
+      },
+      {
+        "idx": 8,
+        "success": true,
+        "timed_out": false,
+        "elapsed": 14.18,
+        "exit_code": 0,
+        "stderr_tail": "Cloning into '/tmp/sglang_504_r3/clone_8'...\n"
+      },
+      {
+        "idx": 9,
+        "success": true,
+        "timed_out": false,
+        "elapsed": 14.71,
+        "exit_code": 0,
+        "stderr_tail": "Cloning into '/tmp/sglang_504_r3/clone_9'...\n"
+      },
+      {
+        "idx": 10,
+        "success": true,
+        "timed_out": false,
+        "elapsed": 5.84,
+        "exit_code": 0,
+        "stderr_tail": "Cloning into '/tmp/sglang_504_r3/clone_10'...\n"
+      },
+      {
+        "idx": 11,
+        "success": true,
+        "timed_out": false,
+        "elapsed": 7.11,
+        "exit_code": 0,
+        "stderr_tail": "Cloning into '/tmp/sglang_504_r3/clone_11'...\n"
+      },
+      {
+        "idx": 12,
+        "success": true,
+        "timed_out": false,
+        "elapsed": 7.56,
+        "exit_code": 0,
+        "stderr_tail": "Cloning into '/tmp/sglang_504_r3/clone_12'...\n"
+      },
+      {
+        "idx": 13,
+        "success": true,
+        "timed_out": false,
+        "elapsed": 8.64,
+        "exit_code": 0,
+        "stderr_tail": "Cloning into '/tmp/sglang_504_r3/clone_13'...\n"
+      },
+      {
+        "idx": 14,
+        "success": false,
+        "timed_out": true,
+        "elapsed": 15.02,
+        "exit_code": -1,
+        "stderr_tail": "Cloning into '/tmp/sglang_504_r3/clone_14'...\n"
+      },
+      {
+        "idx": 15,
+        "success": false,
+        "timed_out": true,
+        "elapsed": 15.01,
+        "exit_code": -1,
+        "stderr_tail": "Cloning into '/tmp/sglang_504_r3/clone_15'...\nfatal: early EOF\n"
+      },
+      {
+        "idx": 16,
+        "success": false,
+        "timed_out": true,
+        "elapsed": 15.04,
+        "exit_code": -1,
+        "stderr_tail": "Cloning into '/tmp/sglang_504_r3/clone_16'...\n"
+      },
+      {
+        "idx": 17,
+        "success": true,
+        "timed_out": false,
+        "elapsed": 11.6,
+        "exit_code": 0,
+        "stderr_tail": "Cloning into '/tmp/sglang_504_r3/clone_17'...\n"
+      },
+      {
+        "idx": 18,
+        "success": true,
+        "timed_out": false,
+        "elapsed": 8.92,
+        "exit_code": 0,
+        "stderr_tail": "Cloning into '/tmp/sglang_504_r3/clone_18'...\n"
+      },
+      {
+        "idx": 19,
+        "success": true,
+        "timed_out": false,
+        "elapsed": 10.28,
+        "exit_code": 0,
+        "stderr_tail": "Cloning into '/tmp/sglang_504_r3/clone_19'...\n"
+      }
+    ]
+  },
+  {
+    "round": 4,
+    "concurrency": 30,
+    "timeout": 10,
+    "wall_time": 10.44,
+    "ok": 2,
+    "failed": 28,
+    "timed_out": 28,
+    "avg_elapsed": 9.93,
+    "max_elapsed": 10.25,
+    "results": [
+      {
+        "idx": 0,
+        "success": false,
+        "timed_out": true,
+        "elapsed": 10.25,
+        "exit_code": -1,
+        "stderr_tail": "Cloning into '/tmp/sglang_504_r4/clone_0'...\nfatal: early EOF\n"
+      },
+      {
+        "idx": 1,
+        "success": false,
+        "timed_out": true,
+        "elapsed": 10.25,
+        "exit_code": -1,
+        "stderr_tail": "Cloning into '/tmp/sglang_504_r4/clone_1'...\nfatal: early EOF\n"
+      },
+      {
+        "idx": 2,
+        "success": false,
+        "timed_out": true,
+        "elapsed": 10.25,
+        "exit_code": -1,
+        "stderr_tail": "Cloning into '/tmp/sglang_504_r4/clone_2'...\nfatal: early EOF\n"
+      },
+      {
+        "idx": 3,
+        "success": false,
+        "timed_out": true,
+        "elapsed": 10.25,
+        "exit_code": -1,
+        "stderr_tail": "Cloning into '/tmp/sglang_504_r4/clone_3'...\nfatal: early EOF\n"
+      },
+      {
+        "idx": 4,
+        "success": false,
+        "timed_out": true,
+        "elapsed": 10.24,
+        "exit_code": -1,
+        "stderr_tail": "Cloning into '/tmp/sglang_504_r4/clone_4'...\nfatal: early EOF\n"
+      },
+      {
+        "idx": 5,
+        "success": false,
+        "timed_out": true,
+        "elapsed": 10.24,
+        "exit_code": -1,
+        "stderr_tail": "Cloning into '/tmp/sglang_504_r4/clone_5'...\nfatal: early EOF\n"
+      },
+      {
+        "idx": 6,
+        "success": false,
+        "timed_out": true,
+        "elapsed": 10.24,
+        "exit_code": -1,
+        "stderr_tail": "Cloning into '/tmp/sglang_504_r4/clone_6'...\nfatal: early EOF\n"
+      },
+      {
+        "idx": 7,
+        "success": true,
+        "timed_out": false,
+        "elapsed": 4.41,
+        "exit_code": 0,
+        "stderr_tail": "Cloning into '/tmp/sglang_504_r4/clone_7'...\n"
+      },
+      {
+        "idx": 8,
+        "success": false,
+        "timed_out": true,
+        "elapsed": 10.24,
+        "exit_code": -1,
+        "stderr_tail": "Cloning into '/tmp/sglang_504_r4/clone_8'...\nfatal: early EOF\n"
+      },
+      {
+        "idx": 9,
+        "success": false,
+        "timed_out": true,
+        "elapsed": 10.23,
+        "exit_code": -1,
+        "stderr_tail": "Cloning into '/tmp/sglang_504_r4/clone_9'...\nfatal: early EOF\n"
+      },
+      {
+        "idx": 10,
+        "success": false,
+        "timed_out": true,
+        "elapsed": 10.23,
+        "exit_code": -1,
+        "stderr_tail": "Cloning into '/tmp/sglang_504_r4/clone_10'...\nfatal: early EOF\n"
+      },
+      {
+        "idx": 11,
+        "success": false,
+        "timed_out": true,
+        "elapsed": 10.23,
+        "exit_code": -1,
+        "stderr_tail": "Cloning into '/tmp/sglang_504_r4/clone_11'...\nfatal: early EOF\n"
+      },
+      {
+        "idx": 12,
+        "success": false,
+        "timed_out": true,
+        "elapsed": 10.23,
+        "exit_code": -1,
+        "stderr_tail": "Cloning into '/tmp/sglang_504_r4/clone_12'...\nfatal: early EOF\n"
+      },
+      {
+        "idx": 13,
+        "success": false,
+        "timed_out": true,
+        "elapsed": 10.23,
+        "exit_code": -1,
+        "stderr_tail": "Cloning into '/tmp/sglang_504_r4/clone_13'...\nfatal: early EOF\n"
+      },
+      {
+        "idx": 14,
+        "success": false,
+        "timed_out": true,
+        "elapsed": 10.23,
+        "exit_code": -1,
+        "stderr_tail": "Cloning into '/tmp/sglang_504_r4/clone_14'...\nfatal: early EOF\n"
+      },
+      {
+        "idx": 15,
+        "success": false,
+        "timed_out": true,
+        "elapsed": 10.22,
+        "exit_code": -1,
+        "stderr_tail": "Cloning into '/tmp/sglang_504_r4/clone_15'...\nfatal: early EOF\n"
+      },
+      {
+        "idx": 16,
+        "success": false,
+        "timed_out": true,
+        "elapsed": 10.22,
+        "exit_code": -1,
+        "stderr_tail": "Cloning into '/tmp/sglang_504_r4/clone_16'...\nfatal: early EOF\n"
+      },
+      {
+        "idx": 17,
+        "success": false,
+        "timed_out": true,
+        "elapsed": 10.22,
+        "exit_code": -1,
+        "stderr_tail": "Cloning into '/tmp/sglang_504_r4/clone_17'...\nfatal: early EOF\n"
+      },
+      {
+        "idx": 18,
+        "success": false,
+        "timed_out": true,
+        "elapsed": 10.22,
+        "exit_code": -1,
+        "stderr_tail": "Cloning into '/tmp/sglang_504_r4/clone_18'...\nfatal: early EOF\n"
+      },
+      {
+        "idx": 19,
+        "success": false,
+        "timed_out": true,
+        "elapsed": 10.22,
+        "exit_code": -1,
+        "stderr_tail": "Cloning into '/tmp/sglang_504_r4/clone_19'...\nfatal: early EOF\n"
+      },
+      {
+        "idx": 20,
+        "success": false,
+        "timed_out": true,
+        "elapsed": 10.22,
+        "exit_code": -1,
+        "stderr_tail": "Cloning into '/tmp/sglang_504_r4/clone_20'...\nfatal: early EOF\n"
+      },
+      {
+        "idx": 21,
+        "success": false,
+        "timed_out": true,
+        "elapsed": 10.21,
+        "exit_code": -1,
+        "stderr_tail": "Cloning into '/tmp/sglang_504_r4/clone_21'...\nfatal: early EOF\n"
+      },
+      {
+        "idx": 22,
+        "success": false,
+        "timed_out": true,
+        "elapsed": 10.21,
+        "exit_code": -1,
+        "stderr_tail": "Cloning into '/tmp/sglang_504_r4/clone_22'...\nfatal: early EOF\n"
+      },
+      {
+        "idx": 23,
+        "success": false,
+        "timed_out": true,
+        "elapsed": 10.21,
+        "exit_code": -1,
+        "stderr_tail": "Cloning into '/tmp/sglang_504_r4/clone_23'...\n"
+      },
+      {
+        "idx": 24,
+        "success": false,
+        "timed_out": true,
+        "elapsed": 10.21,
+        "exit_code": -1,
+        "stderr_tail": "Cloning into '/tmp/sglang_504_r4/clone_24'...\nfatal: early EOF\n"
+      },
+      {
+        "idx": 25,
+        "success": true,
+        "timed_out": false,
+        "elapsed": 7.35,
+        "exit_code": 0,
+        "stderr_tail": "Cloning into '/tmp/sglang_504_r4/clone_25'...\n"
+      },
+      {
+        "idx": 26,
+        "success": false,
+        "timed_out": true,
+        "elapsed": 10.2,
+        "exit_code": -1,
+        "stderr_tail": "Cloning into '/tmp/sglang_504_r4/clone_26'...\nfatal: early EOF\n"
+      },
+      {
+        "idx": 27,
+        "success": false,
+        "timed_out": true,
+        "elapsed": 10.2,
+        "exit_code": -1,
+        "stderr_tail": "Cloning into '/tmp/sglang_504_r4/clone_27'...\nfatal: early EOF\n"
+      },
+      {
+        "idx": 28,
+        "success": false,
+        "timed_out": true,
+        "elapsed": 10.1,
+        "exit_code": -1,
+        "stderr_tail": "Cloning into '/tmp/sglang_504_r4/clone_28'...\nfatal: early EOF\n"
+      },
+      {
+        "idx": 29,
+        "success": false,
+        "timed_out": true,
+        "elapsed": 10.05,
+        "exit_code": -1,
+        "stderr_tail": "Cloning into '/tmp/sglang_504_r4/clone_29'...\nfatal: early EOF\n"
+      }
+    ]
+  },
+  {
+    "round": 5,
+    "concurrency": 50,
+    "timeout": 8,
+    "wall_time": 8.58,
+    "ok": 1,
+    "failed": 49,
+    "timed_out": 49,
+    "avg_elapsed": 8.34,
+    "max_elapsed": 8.5,
+    "results": [
+      {
+        "idx": 0,
+        "success": false,
+        "timed_out": true,
+        "elapsed": 8.49,
+        "exit_code": -1,
+        "stderr_tail": "Cloning into '/tmp/sglang_504_r5/clone_0'...\nfatal: early EOF\n"
+      },
+      {
+        "idx": 1,
+        "success": false,
+        "timed_out": true,
+        "elapsed": 8.5,
+        "exit_code": -1,
+        "stderr_tail": "Cloning into '/tmp/sglang_504_r5/clone_1'...\nfatal: early EOF\n"
+      },
+      {
+        "idx": 2,
+        "success": false,
+        "timed_out": true,
+        "elapsed": 8.48,
+        "exit_code": -1,
+        "stderr_tail": "Cloning into '/tmp/sglang_504_r5/clone_2'...\nfatal: early EOF\n"
+      },
+      {
+        "idx": 3,
+        "success": false,
+        "timed_out": true,
+        "elapsed": 8.48,
+        "exit_code": -1,
+        "stderr_tail": "Cloning into '/tmp/sglang_504_r5/clone_3'...\nfatal: early EOF\n"
+      },
+      {
+        "idx": 4,
+        "success": false,
+        "timed_out": true,
+        "elapsed": 8.48,
+        "exit_code": -1,
+        "stderr_tail": "Cloning into '/tmp/sglang_504_r5/clone_4'...\nfatal: early EOF\n"
+      },
+      {
+        "idx": 5,
+        "success": false,
+        "timed_out": true,
+        "elapsed": 8.49,
+        "exit_code": -1,
+        "stderr_tail": "Cloning into '/tmp/sglang_504_r5/clone_5'...\nfatal: early EOF\n"
+      },
+      {
+        "idx": 6,
+        "success": false,
+        "timed_out": true,
+        "elapsed": 8.48,
+        "exit_code": -1,
+        "stderr_tail": "Cloning into '/tmp/sglang_504_r5/clone_6'...\nfatal: early EOF\n"
+      },
+      {
+        "idx": 7,
+        "success": false,
+        "timed_out": true,
+        "elapsed": 8.48,
+        "exit_code": -1,
+        "stderr_tail": "Cloning into '/tmp/sglang_504_r5/clone_7'...\nfatal: early EOF\n"
+      },
+      {
+        "idx": 8,
+        "success": false,
+        "timed_out": true,
+        "elapsed": 8.47,
+        "exit_code": -1,
+        "stderr_tail": "Cloning into '/tmp/sglang_504_r5/clone_8'...\nfatal: early EOF\n"
+      },
+      {
+        "idx": 9,
+        "success": false,
+        "timed_out": true,
+        "elapsed": 8.48,
+        "exit_code": -1,
+        "stderr_tail": "Cloning into '/tmp/sglang_504_r5/clone_9'...\nfatal: early EOF\n"
+      },
+      {
+        "idx": 10,
+        "success": true,
+        "timed_out": false,
+        "elapsed": 7.86,
+        "exit_code": 0,
+        "stderr_tail": "Cloning into '/tmp/sglang_504_r5/clone_10'...\n"
+      },
+      {
+        "idx": 11,
+        "success": false,
+        "timed_out": true,
+        "elapsed": 8.47,
+        "exit_code": -1,
+        "stderr_tail": "Cloning into '/tmp/sglang_504_r5/clone_11'...\nfatal: early EOF\n"
+      },
+      {
+        "idx": 12,
+        "success": false,
+        "timed_out": true,
+        "elapsed": 8.46,
+        "exit_code": -1,
+        "stderr_tail": "Cloning into '/tmp/sglang_504_r5/clone_12'...\nfatal: early EOF\n"
+      },
+      {
+        "idx": 13,
+        "success": false,
+        "timed_out": true,
+        "elapsed": 8.47,
+        "exit_code": -1,
+        "stderr_tail": "Cloning into '/tmp/sglang_504_r5/clone_13'...\nfatal: early EOF\n"
+      },
+      {
+        "idx": 14,
+        "success": false,
+        "timed_out": true,
+        "elapsed": 8.47,
+        "exit_code": -1,
+        "stderr_tail": "Cloning into '/tmp/sglang_504_r5/clone_14'...\nfatal: early EOF\n"
+      },
+      {
+        "idx": 15,
+        "success": false,
+        "timed_out": true,
+        "elapsed": 8.47,
+        "exit_code": -1,
+        "stderr_tail": "Cloning into '/tmp/sglang_504_r5/clone_15'...\nfatal: early EOF\n"
+      },
+      {
+        "idx": 16,
+        "success": false,
+        "timed_out": true,
+        "elapsed": 8.46,
+        "exit_code": -1,
+        "stderr_tail": "Cloning into '/tmp/sglang_504_r5/clone_16'...\nfatal: early EOF\n"
+      },
+      {
+        "idx": 17,
+        "success": false,
+        "timed_out": true,
+        "elapsed": 8.47,
+        "exit_code": -1,
+        "stderr_tail": "Cloning into '/tmp/sglang_504_r5/clone_17'...\nfatal: early EOF\n"
+      },
+      {
+        "idx": 18,
+        "success": false,
+        "timed_out": true,
+        "elapsed": 8.45,
+        "exit_code": -1,
+        "stderr_tail": "Cloning into '/tmp/sglang_504_r5/clone_18'...\nfatal: early EOF\n"
+      },
+      {
+        "idx": 19,
+        "success": false,
+        "timed_out": true,
+        "elapsed": 8.45,
+        "exit_code": -1,
+        "stderr_tail": "Cloning into '/tmp/sglang_504_r5/clone_19'...\nfatal: early EOF\n"
+      },
+      {
+        "idx": 20,
+        "success": false,
+        "timed_out": true,
+        "elapsed": 8.45,
+        "exit_code": -1,
+        "stderr_tail": "Cloning into '/tmp/sglang_504_r5/clone_20'...\nfatal: early EOF\n"
+      },
+      {
+        "idx": 21,
+        "success": false,
+        "timed_out": true,
+        "elapsed": 8.44,
+        "exit_code": -1,
+        "stderr_tail": "Cloning into '/tmp/sglang_504_r5/clone_21'...\nfatal: early EOF\n"
+      },
+      {
+        "idx": 22,
+        "success": false,
+        "timed_out": true,
+        "elapsed": 8.45,
+        "exit_code": -1,
+        "stderr_tail": "Cloning into '/tmp/sglang_504_r5/clone_22'...\nfatal: early EOF\n"
+      },
+      {
+        "idx": 23,
+        "success": false,
+        "timed_out": true,
+        "elapsed": 8.45,
+        "exit_code": -1,
+        "stderr_tail": "Cloning into '/tmp/sglang_504_r5/clone_23'...\nfatal: early EOF\n"
+      },
+      {
+        "idx": 24,
+        "success": false,
+        "timed_out": true,
+        "elapsed": 8.46,
+        "exit_code": -1,
+        "stderr_tail": "Cloning into '/tmp/sglang_504_r5/clone_24'...\nfatal: early EOF\n"
+      },
+      {
+        "idx": 25,
+        "success": false,
+        "timed_out": true,
+        "elapsed": 8.45,
+        "exit_code": -1,
+        "stderr_tail": "Cloning into '/tmp/sglang_504_r5/clone_25'...\nfatal: early EOF\n"
+      },
+      {
+        "idx": 26,
+        "success": false,
+        "timed_out": true,
+        "elapsed": 8.43,
+        "exit_code": -1,
+        "stderr_tail": "Cloning into '/tmp/sglang_504_r5/clone_26'...\nfatal: early EOF\n"
+      },
+      {
+        "idx": 27,
+        "success": false,
+        "timed_out": true,
+        "elapsed": 8.45,
+        "exit_code": -1,
+        "stderr_tail": "Cloning into '/tmp/sglang_504_r5/clone_27'...\nfatal: early EOF\n"
+      },
+      {
+        "idx": 28,
+        "success": false,
+        "timed_out": true,
+        "elapsed": 8.43,
+        "exit_code": -1,
+        "stderr_tail": "Cloning into '/tmp/sglang_504_r5/clone_28'...\nfatal: early EOF\n"
+      },
+      {
+        "idx": 29,
+        "success": false,
+        "timed_out": true,
+        "elapsed": 8.36,
+        "exit_code": -1,
+        "stderr_tail": "Cloning into '/tmp/sglang_504_r5/clone_29'...\nfatal: early EOF\n"
+      },
+      {
+        "idx": 30,
+        "success": false,
+        "timed_out": true,
+        "elapsed": 8.31,
+        "exit_code": -1,
+        "stderr_tail": "Cloning into '/tmp/sglang_504_r5/clone_30'...\nfatal: early EOF\n"
+      },
+      {
+        "idx": 31,
+        "success": false,
+        "timed_out": true,
+        "elapsed": 8.31,
+        "exit_code": -1,
+        "stderr_tail": "Cloning into '/tmp/sglang_504_r5/clone_31'...\nfatal: early EOF\n"
+      },
+      {
+        "idx": 32,
+        "success": false,
+        "timed_out": true,
+        "elapsed": 8.3,
+        "exit_code": -1,
+        "stderr_tail": "Cloning into '/tmp/sglang_504_r5/clone_32'...\nfatal: early EOF\n"
+      },
+      {
+        "idx": 33,
+        "success": false,
+        "timed_out": true,
+        "elapsed": 8.24,
+        "exit_code": -1,
+        "stderr_tail": "Cloning into '/tmp/sglang_504_r5/clone_33'...\nfatal: early EOF\n"
+      },
+      {
+        "idx": 34,
+        "success": false,
+        "timed_out": true,
+        "elapsed": 8.23,
+        "exit_code": -1,
+        "stderr_tail": "Cloning into '/tmp/sglang_504_r5/clone_34'...\nfatal: early EOF\n"
+      },
+      {
+        "idx": 35,
+        "success": false,
+        "timed_out": true,
+        "elapsed": 8.2,
+        "exit_code": -1,
+        "stderr_tail": "Cloning into '/tmp/sglang_504_r5/clone_35'...\nfatal: early EOF\n"
+      },
+      {
+        "idx": 36,
+        "success": false,
+        "timed_out": true,
+        "elapsed": 8.21,
+        "exit_code": -1,
+        "stderr_tail": "Cloning into '/tmp/sglang_504_r5/clone_36'...\nfatal: early EOF\n"
+      },
+      {
+        "idx": 37,
+        "success": false,
+        "timed_out": true,
+        "elapsed": 8.19,
+        "exit_code": -1,
+        "stderr_tail": "Cloning into '/tmp/sglang_504_r5/clone_37'...\nfatal: early EOF\n"
+      },
+      {
+        "idx": 38,
+        "success": false,
+        "timed_out": true,
+        "elapsed": 8.2,
+        "exit_code": -1,
+        "stderr_tail": "Cloning into '/tmp/sglang_504_r5/clone_38'...\nfatal: early EOF\n"
+      },
+      {
+        "idx": 39,
+        "success": false,
+        "timed_out": true,
+        "elapsed": 8.18,
+        "exit_code": -1,
+        "stderr_tail": "Cloning into '/tmp/sglang_504_r5/clone_39'...\nfatal: early EOF\n"
+      },
+      {
+        "idx": 40,
+        "success": false,
+        "timed_out": true,
+        "elapsed": 8.2,
+        "exit_code": -1,
+        "stderr_tail": "Cloning into '/tmp/sglang_504_r5/clone_40'...\nfatal: early EOF\n"
+      },
+      {
+        "idx": 41,
+        "success": false,
+        "timed_out": true,
+        "elapsed": 8.17,
+        "exit_code": -1,
+        "stderr_tail": "Cloning into '/tmp/sglang_504_r5/clone_41'...\nfatal: early EOF\n"
+      },
+      {
+        "idx": 42,
+        "success": false,
+        "timed_out": true,
+        "elapsed": 8.13,
+        "exit_code": -1,
+        "stderr_tail": "Cloning into '/tmp/sglang_504_r5/clone_42'...\nfatal: early EOF\n"
+      },
+      {
+        "idx": 43,
+        "success": false,
+        "timed_out": true,
+        "elapsed": 8.13,
+        "exit_code": -1,
+        "stderr_tail": "Cloning into '/tmp/sglang_504_r5/clone_43'...\nfatal: early EOF\n"
+      },
+      {
+        "idx": 44,
+        "success": false,
+        "timed_out": true,
+        "elapsed": 8.14,
+        "exit_code": -1,
+        "stderr_tail": "Cloning into '/tmp/sglang_504_r5/clone_44'...\nfatal: early EOF\n"
+      },
+      {
+        "idx": 45,
+        "success": false,
+        "timed_out": true,
+        "elapsed": 8.13,
+        "exit_code": -1,
+        "stderr_tail": "Cloning into '/tmp/sglang_504_r5/clone_45'...\nfatal: early EOF\n"
+      },
+      {
+        "idx": 46,
+        "success": false,
+        "timed_out": true,
+        "elapsed": 8.12,
+        "exit_code": -1,
+        "stderr_tail": "Cloning into '/tmp/sglang_504_r5/clone_46'...\nfatal: early EOF\n"
+      },
+      {
+        "idx": 47,
+        "success": false,
+        "timed_out": true,
+        "elapsed": 8.09,
+        "exit_code": -1,
+        "stderr_tail": "Cloning into '/tmp/sglang_504_r5/clone_47'...\nfatal: early EOF\n"
+      },
+      {
+        "idx": 48,
+        "success": false,
+        "timed_out": true,
+        "elapsed": 8.08,
+        "exit_code": -1,
+        "stderr_tail": "Cloning into '/tmp/sglang_504_r5/clone_48'...\nfatal: early EOF\n"
+      },
+      {
+        "idx": 49,
+        "success": false,
+        "timed_out": true,
+        "elapsed": 8.06,
+        "exit_code": -1,
+        "stderr_tail": "Cloning into '/tmp/sglang_504_r5/clone_49'...\nfatal: early EOF\n"
+      }
+    ]
+  }
+]
