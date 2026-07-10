@@ -1,0 +1,1988 @@
+{
+  "hk_ip": "20.205.243.166",
+  "korea_ip": "20.200.245.247",
+  "hk_rounds": [
+    {
+      "round": 1,
+      "region": "HK",
+      "concurrency": 5,
+      "timeout": 30,
+      "wall_time": 12.22,
+      "ok": 5,
+      "failed": 0,
+      "timed_out": 0,
+      "avg_elapsed": 7.99,
+      "max_elapsed": 12.22,
+      "results": [
+        {
+          "idx": 0,
+          "success": true,
+          "timed_out": false,
+          "elapsed": 5.68,
+          "exit_code": 0,
+          "stderr_tail": "Cloning into '/tmp/region_test_r1/clone_0'...\n"
+        },
+        {
+          "idx": 1,
+          "success": true,
+          "timed_out": false,
+          "elapsed": 8.33,
+          "exit_code": 0,
+          "stderr_tail": "Cloning into '/tmp/region_test_r1/clone_1'...\n"
+        },
+        {
+          "idx": 2,
+          "success": true,
+          "timed_out": false,
+          "elapsed": 6.28,
+          "exit_code": 0,
+          "stderr_tail": "Cloning into '/tmp/region_test_r1/clone_2'...\n"
+        },
+        {
+          "idx": 3,
+          "success": true,
+          "timed_out": false,
+          "elapsed": 7.45,
+          "exit_code": 0,
+          "stderr_tail": "Cloning into '/tmp/region_test_r1/clone_3'...\n"
+        },
+        {
+          "idx": 4,
+          "success": true,
+          "timed_out": false,
+          "elapsed": 12.22,
+          "exit_code": 0,
+          "stderr_tail": "Cloning into '/tmp/region_test_r1/clone_4'...\n"
+        }
+      ]
+    },
+    {
+      "round": 2,
+      "region": "HK",
+      "concurrency": 10,
+      "timeout": 20,
+      "wall_time": 10.75,
+      "ok": 10,
+      "failed": 0,
+      "timed_out": 0,
+      "avg_elapsed": 7.62,
+      "max_elapsed": 10.74,
+      "results": [
+        {
+          "idx": 0,
+          "success": true,
+          "timed_out": false,
+          "elapsed": 10.46,
+          "exit_code": 0,
+          "stderr_tail": "Cloning into '/tmp/region_test_r2/clone_0'...\n"
+        },
+        {
+          "idx": 1,
+          "success": true,
+          "timed_out": false,
+          "elapsed": 6.23,
+          "exit_code": 0,
+          "stderr_tail": "Cloning into '/tmp/region_test_r2/clone_1'...\n"
+        },
+        {
+          "idx": 2,
+          "success": true,
+          "timed_out": false,
+          "elapsed": 6.34,
+          "exit_code": 0,
+          "stderr_tail": "Cloning into '/tmp/region_test_r2/clone_2'...\n"
+        },
+        {
+          "idx": 3,
+          "success": true,
+          "timed_out": false,
+          "elapsed": 8.97,
+          "exit_code": 0,
+          "stderr_tail": "Cloning into '/tmp/region_test_r2/clone_3'...\n"
+        },
+        {
+          "idx": 4,
+          "success": true,
+          "timed_out": false,
+          "elapsed": 5.76,
+          "exit_code": 0,
+          "stderr_tail": "Cloning into '/tmp/region_test_r2/clone_4'...\n"
+        },
+        {
+          "idx": 5,
+          "success": true,
+          "timed_out": false,
+          "elapsed": 4.0,
+          "exit_code": 0,
+          "stderr_tail": "Cloning into '/tmp/region_test_r2/clone_5'...\n"
+        },
+        {
+          "idx": 6,
+          "success": true,
+          "timed_out": false,
+          "elapsed": 8.9,
+          "exit_code": 0,
+          "stderr_tail": "Cloning into '/tmp/region_test_r2/clone_6'...\n"
+        },
+        {
+          "idx": 7,
+          "success": true,
+          "timed_out": false,
+          "elapsed": 4.47,
+          "exit_code": 0,
+          "stderr_tail": "Cloning into '/tmp/region_test_r2/clone_7'...\n"
+        },
+        {
+          "idx": 8,
+          "success": true,
+          "timed_out": false,
+          "elapsed": 10.32,
+          "exit_code": 0,
+          "stderr_tail": "Cloning into '/tmp/region_test_r2/clone_8'...\n"
+        },
+        {
+          "idx": 9,
+          "success": true,
+          "timed_out": false,
+          "elapsed": 10.74,
+          "exit_code": 0,
+          "stderr_tail": "Cloning into '/tmp/region_test_r2/clone_9'...\n"
+        }
+      ]
+    },
+    {
+      "round": 3,
+      "region": "HK",
+      "concurrency": 20,
+      "timeout": 15,
+      "wall_time": 15.09,
+      "ok": 17,
+      "failed": 3,
+      "timed_out": 3,
+      "avg_elapsed": 11.36,
+      "max_elapsed": 15.02,
+      "results": [
+        {
+          "idx": 0,
+          "success": true,
+          "timed_out": false,
+          "elapsed": 7.07,
+          "exit_code": 0,
+          "stderr_tail": "ting files:  93% (6596/7092)\rUpdating files:  94% (6667/7092)\rUpdating files:  95% (6738/7092)\rUpdating files:  96% (6809/7092)\rUpdating files:  97% (6880/7092)\rUpdating files:  98% (6951/7092)\rUpdating files:  99% (7022/7092)\rUpdating files: 100% (7092/7092)\rUpdating files: 100% (7092/7092), done.\n"
+        },
+        {
+          "idx": 1,
+          "success": true,
+          "timed_out": false,
+          "elapsed": 14.77,
+          "exit_code": 0,
+          "stderr_tail": "Cloning into '/tmp/region_test_r3/clone_1'...\n"
+        },
+        {
+          "idx": 2,
+          "success": true,
+          "timed_out": false,
+          "elapsed": 12.13,
+          "exit_code": 0,
+          "stderr_tail": "Cloning into '/tmp/region_test_r3/clone_2'...\n"
+        },
+        {
+          "idx": 3,
+          "success": true,
+          "timed_out": false,
+          "elapsed": 14.93,
+          "exit_code": 0,
+          "stderr_tail": "Cloning into '/tmp/region_test_r3/clone_3'...\n"
+        },
+        {
+          "idx": 4,
+          "success": true,
+          "timed_out": false,
+          "elapsed": 11.12,
+          "exit_code": 0,
+          "stderr_tail": "Cloning into '/tmp/region_test_r3/clone_4'...\n"
+        },
+        {
+          "idx": 5,
+          "success": true,
+          "timed_out": false,
+          "elapsed": 6.63,
+          "exit_code": 0,
+          "stderr_tail": "Cloning into '/tmp/region_test_r3/clone_5'...\n"
+        },
+        {
+          "idx": 6,
+          "success": true,
+          "timed_out": false,
+          "elapsed": 6.95,
+          "exit_code": 0,
+          "stderr_tail": "Cloning into '/tmp/region_test_r3/clone_6'...\nUpdating files:  99% (7039/7092)\rUpdating files: 100% (7092/7092)\rUpdating files: 100% (7092/7092), done.\n"
+        },
+        {
+          "idx": 7,
+          "success": true,
+          "timed_out": false,
+          "elapsed": 8.4,
+          "exit_code": 0,
+          "stderr_tail": "Cloning into '/tmp/region_test_r3/clone_7'...\n"
+        },
+        {
+          "idx": 8,
+          "success": true,
+          "timed_out": false,
+          "elapsed": 12.7,
+          "exit_code": 0,
+          "stderr_tail": "Cloning into '/tmp/region_test_r3/clone_8'...\nUpdating files:  96% (6855/7092)\rUpdating files:  97% (6880/7092)\rUpdating files:  98% (6951/7092)\rUpdating files:  99% (7022/7092)\rUpdating files: 100% (7092/7092)\rUpdating files: 100% (7092/7092), done.\n"
+        },
+        {
+          "idx": 9,
+          "success": false,
+          "timed_out": true,
+          "elapsed": 15.02,
+          "exit_code": -1,
+          "stderr_tail": "Cloning into '/tmp/region_test_r3/clone_9'...\nfatal: early EOF\n"
+        },
+        {
+          "idx": 10,
+          "success": true,
+          "timed_out": false,
+          "elapsed": 13.12,
+          "exit_code": 0,
+          "stderr_tail": "Cloning into '/tmp/region_test_r3/clone_10'...\n"
+        },
+        {
+          "idx": 11,
+          "success": true,
+          "timed_out": false,
+          "elapsed": 6.17,
+          "exit_code": 0,
+          "stderr_tail": "Cloning into '/tmp/region_test_r3/clone_11'...\n"
+        },
+        {
+          "idx": 12,
+          "success": false,
+          "timed_out": true,
+          "elapsed": 15.02,
+          "exit_code": -1,
+          "stderr_tail": "Cloning into '/tmp/region_test_r3/clone_12'...\n"
+        },
+        {
+          "idx": 13,
+          "success": true,
+          "timed_out": false,
+          "elapsed": 12.72,
+          "exit_code": 0,
+          "stderr_tail": "Cloning into '/tmp/region_test_r3/clone_13'...\n"
+        },
+        {
+          "idx": 14,
+          "success": true,
+          "timed_out": false,
+          "elapsed": 14.99,
+          "exit_code": 0,
+          "stderr_tail": "Cloning into '/tmp/region_test_r3/clone_14'...\n"
+        },
+        {
+          "idx": 15,
+          "success": true,
+          "timed_out": false,
+          "elapsed": 6.72,
+          "exit_code": 0,
+          "stderr_tail": "Cloning into '/tmp/region_test_r3/clone_15'...\n"
+        },
+        {
+          "idx": 16,
+          "success": true,
+          "timed_out": false,
+          "elapsed": 7.73,
+          "exit_code": 0,
+          "stderr_tail": "Cloning into '/tmp/region_test_r3/clone_16'...\n"
+        },
+        {
+          "idx": 17,
+          "success": true,
+          "timed_out": false,
+          "elapsed": 14.14,
+          "exit_code": 0,
+          "stderr_tail": "Cloning into '/tmp/region_test_r3/clone_17'...\n"
+        },
+        {
+          "idx": 18,
+          "success": true,
+          "timed_out": false,
+          "elapsed": 11.86,
+          "exit_code": 0,
+          "stderr_tail": "Cloning into '/tmp/region_test_r3/clone_18'...\n"
+        },
+        {
+          "idx": 19,
+          "success": false,
+          "timed_out": true,
+          "elapsed": 15.01,
+          "exit_code": -1,
+          "stderr_tail": "Cloning into '/tmp/region_test_r3/clone_19'...\nfatal: early EOF\n"
+        }
+      ]
+    },
+    {
+      "round": 4,
+      "region": "HK",
+      "concurrency": 30,
+      "timeout": 10,
+      "wall_time": 10.29,
+      "ok": 7,
+      "failed": 23,
+      "timed_out": 23,
+      "avg_elapsed": 9.67,
+      "max_elapsed": 10.24,
+      "results": [
+        {
+          "idx": 0,
+          "success": true,
+          "timed_out": false,
+          "elapsed": 7.33,
+          "exit_code": 0,
+          "stderr_tail": "Cloning into '/tmp/region_test_r4/clone_0'...\n"
+        },
+        {
+          "idx": 1,
+          "success": false,
+          "timed_out": true,
+          "elapsed": 10.22,
+          "exit_code": -1,
+          "stderr_tail": "Cloning into '/tmp/region_test_r4/clone_1'...\nfatal: early EOF\n"
+        },
+        {
+          "idx": 2,
+          "success": false,
+          "timed_out": true,
+          "elapsed": 10.23,
+          "exit_code": -1,
+          "stderr_tail": "Cloning into '/tmp/region_test_r4/clone_2'...\nfatal: early EOF\n"
+        },
+        {
+          "idx": 3,
+          "success": true,
+          "timed_out": false,
+          "elapsed": 5.69,
+          "exit_code": 0,
+          "stderr_tail": "Cloning into '/tmp/region_test_r4/clone_3'...\n"
+        },
+        {
+          "idx": 4,
+          "success": false,
+          "timed_out": true,
+          "elapsed": 10.23,
+          "exit_code": -1,
+          "stderr_tail": "Cloning into '/tmp/region_test_r4/clone_4'...\nfatal: early EOF\n"
+        },
+        {
+          "idx": 5,
+          "success": false,
+          "timed_out": true,
+          "elapsed": 10.24,
+          "exit_code": -1,
+          "stderr_tail": "Cloning into '/tmp/region_test_r4/clone_5'...\nfatal: early EOF\n"
+        },
+        {
+          "idx": 6,
+          "success": false,
+          "timed_out": true,
+          "elapsed": 10.23,
+          "exit_code": -1,
+          "stderr_tail": "Cloning into '/tmp/region_test_r4/clone_6'...\nfatal: early EOF\n"
+        },
+        {
+          "idx": 7,
+          "success": false,
+          "timed_out": true,
+          "elapsed": 10.23,
+          "exit_code": -1,
+          "stderr_tail": "Cloning into '/tmp/region_test_r4/clone_7'...\nfatal: early EOF\n"
+        },
+        {
+          "idx": 8,
+          "success": false,
+          "timed_out": true,
+          "elapsed": 10.21,
+          "exit_code": -1,
+          "stderr_tail": "Cloning into '/tmp/region_test_r4/clone_8'...\nfatal: early EOF\n"
+        },
+        {
+          "idx": 9,
+          "success": false,
+          "timed_out": true,
+          "elapsed": 10.21,
+          "exit_code": -1,
+          "stderr_tail": "Cloning into '/tmp/region_test_r4/clone_9'...\nfatal: early EOF\n"
+        },
+        {
+          "idx": 10,
+          "success": false,
+          "timed_out": true,
+          "elapsed": 10.2,
+          "exit_code": -1,
+          "stderr_tail": "Cloning into '/tmp/region_test_r4/clone_10'...\nfatal: early EOF\n"
+        },
+        {
+          "idx": 11,
+          "success": true,
+          "timed_out": false,
+          "elapsed": 8.99,
+          "exit_code": 0,
+          "stderr_tail": "Cloning into '/tmp/region_test_r4/clone_11'...\n"
+        },
+        {
+          "idx": 12,
+          "success": false,
+          "timed_out": true,
+          "elapsed": 10.22,
+          "exit_code": -1,
+          "stderr_tail": "Cloning into '/tmp/region_test_r4/clone_12'...\nfatal: early EOF\n"
+        },
+        {
+          "idx": 13,
+          "success": true,
+          "timed_out": false,
+          "elapsed": 8.9,
+          "exit_code": 0,
+          "stderr_tail": "Cloning into '/tmp/region_test_r4/clone_13'...\n"
+        },
+        {
+          "idx": 14,
+          "success": false,
+          "timed_out": true,
+          "elapsed": 10.21,
+          "exit_code": -1,
+          "stderr_tail": "Cloning into '/tmp/region_test_r4/clone_14'...\nfatal: early EOF\n"
+        },
+        {
+          "idx": 15,
+          "success": false,
+          "timed_out": true,
+          "elapsed": 10.21,
+          "exit_code": -1,
+          "stderr_tail": "Cloning into '/tmp/region_test_r4/clone_15'...\nfatal: early EOF\n"
+        },
+        {
+          "idx": 16,
+          "success": true,
+          "timed_out": false,
+          "elapsed": 9.32,
+          "exit_code": 0,
+          "stderr_tail": "Cloning into '/tmp/region_test_r4/clone_16'...\n"
+        },
+        {
+          "idx": 17,
+          "success": false,
+          "timed_out": true,
+          "elapsed": 10.21,
+          "exit_code": -1,
+          "stderr_tail": "Cloning into '/tmp/region_test_r4/clone_17'...\nfatal: early EOF\n"
+        },
+        {
+          "idx": 18,
+          "success": false,
+          "timed_out": true,
+          "elapsed": 10.2,
+          "exit_code": -1,
+          "stderr_tail": "Cloning into '/tmp/region_test_r4/clone_18'...\nfatal: early EOF\n"
+        },
+        {
+          "idx": 19,
+          "success": true,
+          "timed_out": false,
+          "elapsed": 9.2,
+          "exit_code": 0,
+          "stderr_tail": "Cloning into '/tmp/region_test_r4/clone_19'...\n"
+        },
+        {
+          "idx": 20,
+          "success": false,
+          "timed_out": true,
+          "elapsed": 10.21,
+          "exit_code": -1,
+          "stderr_tail": "Cloning into '/tmp/region_test_r4/clone_20'...\nfatal: early EOF\n"
+        },
+        {
+          "idx": 21,
+          "success": false,
+          "timed_out": true,
+          "elapsed": 10.2,
+          "exit_code": -1,
+          "stderr_tail": "Cloning into '/tmp/region_test_r4/clone_21'...\nfatal: early EOF\n"
+        },
+        {
+          "idx": 22,
+          "success": true,
+          "timed_out": false,
+          "elapsed": 6.1,
+          "exit_code": 0,
+          "stderr_tail": "Cloning into '/tmp/region_test_r4/clone_22'...\n"
+        },
+        {
+          "idx": 23,
+          "success": false,
+          "timed_out": true,
+          "elapsed": 10.19,
+          "exit_code": -1,
+          "stderr_tail": "Cloning into '/tmp/region_test_r4/clone_23'...\nfatal: early EOF\n"
+        },
+        {
+          "idx": 24,
+          "success": false,
+          "timed_out": true,
+          "elapsed": 10.19,
+          "exit_code": -1,
+          "stderr_tail": "Cloning into '/tmp/region_test_r4/clone_24'...\nfatal: early EOF\n"
+        },
+        {
+          "idx": 25,
+          "success": false,
+          "timed_out": true,
+          "elapsed": 10.2,
+          "exit_code": -1,
+          "stderr_tail": "Cloning into '/tmp/region_test_r4/clone_25'...\nfatal: early EOF\n"
+        },
+        {
+          "idx": 26,
+          "success": false,
+          "timed_out": true,
+          "elapsed": 10.21,
+          "exit_code": -1,
+          "stderr_tail": "Cloning into '/tmp/region_test_r4/clone_26'...\nfatal: early EOF\n"
+        },
+        {
+          "idx": 27,
+          "success": false,
+          "timed_out": true,
+          "elapsed": 10.2,
+          "exit_code": -1,
+          "stderr_tail": "Cloning into '/tmp/region_test_r4/clone_27'...\nfatal: early EOF\n"
+        },
+        {
+          "idx": 28,
+          "success": false,
+          "timed_out": true,
+          "elapsed": 10.12,
+          "exit_code": -1,
+          "stderr_tail": "Cloning into '/tmp/region_test_r4/clone_28'...\nfatal: early EOF\n"
+        },
+        {
+          "idx": 29,
+          "success": false,
+          "timed_out": true,
+          "elapsed": 10.09,
+          "exit_code": -1,
+          "stderr_tail": "Cloning into '/tmp/region_test_r4/clone_29'...\nfatal: early EOF\n"
+        }
+      ]
+    },
+    {
+      "round": 5,
+      "region": "HK",
+      "concurrency": 50,
+      "timeout": 8,
+      "wall_time": 8.69,
+      "ok": 1,
+      "failed": 49,
+      "timed_out": 49,
+      "avg_elapsed": 8.31,
+      "max_elapsed": 8.49,
+      "results": [
+        {
+          "idx": 0,
+          "success": false,
+          "timed_out": true,
+          "elapsed": 8.47,
+          "exit_code": -1,
+          "stderr_tail": "Cloning into '/tmp/region_test_r5/clone_0'...\nfatal: early EOF\n"
+        },
+        {
+          "idx": 1,
+          "success": false,
+          "timed_out": true,
+          "elapsed": 8.49,
+          "exit_code": -1,
+          "stderr_tail": "Cloning into '/tmp/region_test_r5/clone_1'...\nfatal: early EOF\n"
+        },
+        {
+          "idx": 2,
+          "success": false,
+          "timed_out": true,
+          "elapsed": 8.49,
+          "exit_code": -1,
+          "stderr_tail": "Cloning into '/tmp/region_test_r5/clone_2'...\nfatal: early EOF\n"
+        },
+        {
+          "idx": 3,
+          "success": true,
+          "timed_out": false,
+          "elapsed": 5.39,
+          "exit_code": 0,
+          "stderr_tail": "Cloning into '/tmp/region_test_r5/clone_3'...\n"
+        },
+        {
+          "idx": 4,
+          "success": false,
+          "timed_out": true,
+          "elapsed": 8.48,
+          "exit_code": -1,
+          "stderr_tail": "Cloning into '/tmp/region_test_r5/clone_4'...\nfatal: early EOF\n"
+        },
+        {
+          "idx": 5,
+          "success": false,
+          "timed_out": true,
+          "elapsed": 8.48,
+          "exit_code": -1,
+          "stderr_tail": "Cloning into '/tmp/region_test_r5/clone_5'...\nfatal: early EOF\n"
+        },
+        {
+          "idx": 6,
+          "success": false,
+          "timed_out": true,
+          "elapsed": 8.49,
+          "exit_code": -1,
+          "stderr_tail": "Cloning into '/tmp/region_test_r5/clone_6'...\nfatal: early EOF\n"
+        },
+        {
+          "idx": 7,
+          "success": false,
+          "timed_out": true,
+          "elapsed": 8.46,
+          "exit_code": -1,
+          "stderr_tail": "Cloning into '/tmp/region_test_r5/clone_7'...\nfatal: early EOF\n"
+        },
+        {
+          "idx": 8,
+          "success": false,
+          "timed_out": true,
+          "elapsed": 8.47,
+          "exit_code": -1,
+          "stderr_tail": "Cloning into '/tmp/region_test_r5/clone_8'...\nfatal: early EOF\n"
+        },
+        {
+          "idx": 9,
+          "success": false,
+          "timed_out": true,
+          "elapsed": 8.46,
+          "exit_code": -1,
+          "stderr_tail": "Cloning into '/tmp/region_test_r5/clone_9'...\nfatal: early EOF\n"
+        },
+        {
+          "idx": 10,
+          "success": false,
+          "timed_out": true,
+          "elapsed": 8.48,
+          "exit_code": -1,
+          "stderr_tail": "Cloning into '/tmp/region_test_r5/clone_10'...\nfatal: early EOF\n"
+        },
+        {
+          "idx": 11,
+          "success": false,
+          "timed_out": true,
+          "elapsed": 8.47,
+          "exit_code": -1,
+          "stderr_tail": "Cloning into '/tmp/region_test_r5/clone_11'...\nfatal: early EOF\n"
+        },
+        {
+          "idx": 12,
+          "success": false,
+          "timed_out": true,
+          "elapsed": 8.47,
+          "exit_code": -1,
+          "stderr_tail": "Cloning into '/tmp/region_test_r5/clone_12'...\nfatal: early EOF\n"
+        },
+        {
+          "idx": 13,
+          "success": false,
+          "timed_out": true,
+          "elapsed": 8.48,
+          "exit_code": -1,
+          "stderr_tail": "Cloning into '/tmp/region_test_r5/clone_13'...\nfatal: early EOF\n"
+        },
+        {
+          "idx": 14,
+          "success": false,
+          "timed_out": true,
+          "elapsed": 8.48,
+          "exit_code": -1,
+          "stderr_tail": "Cloning into '/tmp/region_test_r5/clone_14'...\nfatal: early EOF\n"
+        },
+        {
+          "idx": 15,
+          "success": false,
+          "timed_out": true,
+          "elapsed": 8.47,
+          "exit_code": -1,
+          "stderr_tail": "Cloning into '/tmp/region_test_r5/clone_15'...\nfatal: early EOF\n"
+        },
+        {
+          "idx": 16,
+          "success": false,
+          "timed_out": true,
+          "elapsed": 8.47,
+          "exit_code": -1,
+          "stderr_tail": "Cloning into '/tmp/region_test_r5/clone_16'...\nfatal: early EOF\n"
+        },
+        {
+          "idx": 17,
+          "success": false,
+          "timed_out": true,
+          "elapsed": 8.45,
+          "exit_code": -1,
+          "stderr_tail": "Cloning into '/tmp/region_test_r5/clone_17'...\nfatal: early EOF\n"
+        },
+        {
+          "idx": 18,
+          "success": false,
+          "timed_out": true,
+          "elapsed": 8.46,
+          "exit_code": -1,
+          "stderr_tail": "Cloning into '/tmp/region_test_r5/clone_18'...\nfatal: early EOF\n"
+        },
+        {
+          "idx": 19,
+          "success": false,
+          "timed_out": true,
+          "elapsed": 8.47,
+          "exit_code": -1,
+          "stderr_tail": "Cloning into '/tmp/region_test_r5/clone_19'...\nfatal: early EOF\n"
+        },
+        {
+          "idx": 20,
+          "success": false,
+          "timed_out": true,
+          "elapsed": 8.45,
+          "exit_code": -1,
+          "stderr_tail": "Cloning into '/tmp/region_test_r5/clone_20'...\nfatal: early EOF\n"
+        },
+        {
+          "idx": 21,
+          "success": false,
+          "timed_out": true,
+          "elapsed": 8.45,
+          "exit_code": -1,
+          "stderr_tail": "Cloning into '/tmp/region_test_r5/clone_21'...\nfatal: early EOF\n"
+        },
+        {
+          "idx": 22,
+          "success": false,
+          "timed_out": true,
+          "elapsed": 8.44,
+          "exit_code": -1,
+          "stderr_tail": "Cloning into '/tmp/region_test_r5/clone_22'...\nfatal: early EOF\n"
+        },
+        {
+          "idx": 23,
+          "success": false,
+          "timed_out": true,
+          "elapsed": 8.44,
+          "exit_code": -1,
+          "stderr_tail": "Cloning into '/tmp/region_test_r5/clone_23'...\nfatal: early EOF\n"
+        },
+        {
+          "idx": 24,
+          "success": false,
+          "timed_out": true,
+          "elapsed": 8.46,
+          "exit_code": -1,
+          "stderr_tail": "Cloning into '/tmp/region_test_r5/clone_24'...\nfatal: early EOF\n"
+        },
+        {
+          "idx": 25,
+          "success": false,
+          "timed_out": true,
+          "elapsed": 8.46,
+          "exit_code": -1,
+          "stderr_tail": "Cloning into '/tmp/region_test_r5/clone_25'...\nfatal: early EOF\n"
+        },
+        {
+          "idx": 26,
+          "success": false,
+          "timed_out": true,
+          "elapsed": 8.45,
+          "exit_code": -1,
+          "stderr_tail": "Cloning into '/tmp/region_test_r5/clone_26'...\nfatal: early EOF\n"
+        },
+        {
+          "idx": 27,
+          "success": false,
+          "timed_out": true,
+          "elapsed": 8.45,
+          "exit_code": -1,
+          "stderr_tail": "Cloning into '/tmp/region_test_r5/clone_27'...\nfatal: early EOF\n"
+        },
+        {
+          "idx": 28,
+          "success": false,
+          "timed_out": true,
+          "elapsed": 8.44,
+          "exit_code": -1,
+          "stderr_tail": "Cloning into '/tmp/region_test_r5/clone_28'...\nfatal: early EOF\n"
+        },
+        {
+          "idx": 29,
+          "success": false,
+          "timed_out": true,
+          "elapsed": 8.45,
+          "exit_code": -1,
+          "stderr_tail": "Cloning into '/tmp/region_test_r5/clone_29'...\nfatal: early EOF\n"
+        },
+        {
+          "idx": 30,
+          "success": false,
+          "timed_out": true,
+          "elapsed": 8.44,
+          "exit_code": -1,
+          "stderr_tail": "Cloning into '/tmp/region_test_r5/clone_30'...\nfatal: early EOF\n"
+        },
+        {
+          "idx": 31,
+          "success": false,
+          "timed_out": true,
+          "elapsed": 8.45,
+          "exit_code": -1,
+          "stderr_tail": "Cloning into '/tmp/region_test_r5/clone_31'...\nfatal: early EOF\n"
+        },
+        {
+          "idx": 32,
+          "success": false,
+          "timed_out": true,
+          "elapsed": 8.36,
+          "exit_code": -1,
+          "stderr_tail": "Cloning into '/tmp/region_test_r5/clone_32'...\nfatal: early EOF\n"
+        },
+        {
+          "idx": 33,
+          "success": false,
+          "timed_out": true,
+          "elapsed": 8.3,
+          "exit_code": -1,
+          "stderr_tail": "Cloning into '/tmp/region_test_r5/clone_33'...\nfatal: early EOF\n"
+        },
+        {
+          "idx": 34,
+          "success": false,
+          "timed_out": true,
+          "elapsed": 8.29,
+          "exit_code": -1,
+          "stderr_tail": "Cloning into '/tmp/region_test_r5/clone_34'...\nfatal: early EOF\n"
+        },
+        {
+          "idx": 35,
+          "success": false,
+          "timed_out": true,
+          "elapsed": 8.28,
+          "exit_code": -1,
+          "stderr_tail": "Cloning into '/tmp/region_test_r5/clone_35'...\nfatal: early EOF\n"
+        },
+        {
+          "idx": 36,
+          "success": false,
+          "timed_out": true,
+          "elapsed": 8.25,
+          "exit_code": -1,
+          "stderr_tail": "Cloning into '/tmp/region_test_r5/clone_36'...\nfatal: early EOF\n"
+        },
+        {
+          "idx": 37,
+          "success": false,
+          "timed_out": true,
+          "elapsed": 8.24,
+          "exit_code": -1,
+          "stderr_tail": "Cloning into '/tmp/region_test_r5/clone_37'...\nfatal: early EOF\n"
+        },
+        {
+          "idx": 38,
+          "success": false,
+          "timed_out": true,
+          "elapsed": 8.23,
+          "exit_code": -1,
+          "stderr_tail": "Cloning into '/tmp/region_test_r5/clone_38'...\nfatal: early EOF\n"
+        },
+        {
+          "idx": 39,
+          "success": false,
+          "timed_out": true,
+          "elapsed": 8.19,
+          "exit_code": -1,
+          "stderr_tail": "Cloning into '/tmp/region_test_r5/clone_39'...\nfatal: early EOF\n"
+        },
+        {
+          "idx": 40,
+          "success": false,
+          "timed_out": true,
+          "elapsed": 8.21,
+          "exit_code": -1,
+          "stderr_tail": "Cloning into '/tmp/region_test_r5/clone_40'...\nfatal: early EOF\n"
+        },
+        {
+          "idx": 41,
+          "success": false,
+          "timed_out": true,
+          "elapsed": 8.19,
+          "exit_code": -1,
+          "stderr_tail": "Cloning into '/tmp/region_test_r5/clone_41'...\nfatal: early EOF\n"
+        },
+        {
+          "idx": 42,
+          "success": false,
+          "timed_out": true,
+          "elapsed": 8.19,
+          "exit_code": -1,
+          "stderr_tail": "Cloning into '/tmp/region_test_r5/clone_42'...\nfatal: early EOF\n"
+        },
+        {
+          "idx": 43,
+          "success": false,
+          "timed_out": true,
+          "elapsed": 8.19,
+          "exit_code": -1,
+          "stderr_tail": "Cloning into '/tmp/region_test_r5/clone_43'...\nfatal: early EOF\n"
+        },
+        {
+          "idx": 44,
+          "success": false,
+          "timed_out": true,
+          "elapsed": 8.16,
+          "exit_code": -1,
+          "stderr_tail": "Cloning into '/tmp/region_test_r5/clone_44'...\nfatal: early EOF\n"
+        },
+        {
+          "idx": 45,
+          "success": false,
+          "timed_out": true,
+          "elapsed": 8.17,
+          "exit_code": -1,
+          "stderr_tail": "Cloning into '/tmp/region_test_r5/clone_45'...\nfatal: early EOF\n"
+        },
+        {
+          "idx": 46,
+          "success": false,
+          "timed_out": true,
+          "elapsed": 8.15,
+          "exit_code": -1,
+          "stderr_tail": "Cloning into '/tmp/region_test_r5/clone_46'...\nfatal: early EOF\n"
+        },
+        {
+          "idx": 47,
+          "success": false,
+          "timed_out": true,
+          "elapsed": 8.12,
+          "exit_code": -1,
+          "stderr_tail": "Cloning into '/tmp/region_test_r5/clone_47'...\nfatal: early EOF\n"
+        },
+        {
+          "idx": 48,
+          "success": false,
+          "timed_out": true,
+          "elapsed": 8.08,
+          "exit_code": -1,
+          "stderr_tail": "Cloning into '/tmp/region_test_r5/clone_48'...\nfatal: early EOF\n"
+        },
+        {
+          "idx": 49,
+          "success": false,
+          "timed_out": true,
+          "elapsed": 8.07,
+          "exit_code": -1,
+          "stderr_tail": "Cloning into '/tmp/region_test_r5/clone_49'...\nfatal: early EOF\n"
+        }
+      ]
+    }
+  ],
+  "korea_rounds": [
+    {
+      "round": 1,
+      "region": "Korea",
+      "concurrency": 5,
+      "timeout": 30,
+      "wall_time": 7.97,
+      "ok": 5,
+      "failed": 0,
+      "timed_out": 0,
+      "avg_elapsed": 6.06,
+      "max_elapsed": 7.97,
+      "results": [
+        {
+          "idx": 0,
+          "success": true,
+          "timed_out": false,
+          "elapsed": 5.55,
+          "exit_code": 0,
+          "stderr_tail": "Cloning into '/tmp/region_test_r1/clone_0'...\n"
+        },
+        {
+          "idx": 1,
+          "success": true,
+          "timed_out": false,
+          "elapsed": 7.97,
+          "exit_code": 0,
+          "stderr_tail": "Cloning into '/tmp/region_test_r1/clone_1'...\n"
+        },
+        {
+          "idx": 2,
+          "success": true,
+          "timed_out": false,
+          "elapsed": 5.81,
+          "exit_code": 0,
+          "stderr_tail": "Cloning into '/tmp/region_test_r1/clone_2'...\n"
+        },
+        {
+          "idx": 3,
+          "success": true,
+          "timed_out": false,
+          "elapsed": 5.54,
+          "exit_code": 0,
+          "stderr_tail": "Cloning into '/tmp/region_test_r1/clone_3'...\n"
+        },
+        {
+          "idx": 4,
+          "success": true,
+          "timed_out": false,
+          "elapsed": 5.45,
+          "exit_code": 0,
+          "stderr_tail": "Cloning into '/tmp/region_test_r1/clone_4'...\n"
+        }
+      ]
+    },
+    {
+      "round": 2,
+      "region": "Korea",
+      "concurrency": 10,
+      "timeout": 20,
+      "wall_time": 10.69,
+      "ok": 10,
+      "failed": 0,
+      "timed_out": 0,
+      "avg_elapsed": 8.22,
+      "max_elapsed": 10.69,
+      "results": [
+        {
+          "idx": 0,
+          "success": true,
+          "timed_out": false,
+          "elapsed": 9.78,
+          "exit_code": 0,
+          "stderr_tail": "Cloning into '/tmp/region_test_r2/clone_0'...\n"
+        },
+        {
+          "idx": 1,
+          "success": true,
+          "timed_out": false,
+          "elapsed": 10.23,
+          "exit_code": 0,
+          "stderr_tail": "Cloning into '/tmp/region_test_r2/clone_1'...\n"
+        },
+        {
+          "idx": 2,
+          "success": true,
+          "timed_out": false,
+          "elapsed": 8.92,
+          "exit_code": 0,
+          "stderr_tail": "Cloning into '/tmp/region_test_r2/clone_2'...\n"
+        },
+        {
+          "idx": 3,
+          "success": true,
+          "timed_out": false,
+          "elapsed": 4.25,
+          "exit_code": 0,
+          "stderr_tail": "Cloning into '/tmp/region_test_r2/clone_3'...\n"
+        },
+        {
+          "idx": 4,
+          "success": true,
+          "timed_out": false,
+          "elapsed": 9.97,
+          "exit_code": 0,
+          "stderr_tail": "Cloning into '/tmp/region_test_r2/clone_4'...\n"
+        },
+        {
+          "idx": 5,
+          "success": true,
+          "timed_out": false,
+          "elapsed": 9.49,
+          "exit_code": 0,
+          "stderr_tail": "Cloning into '/tmp/region_test_r2/clone_5'...\n"
+        },
+        {
+          "idx": 6,
+          "success": true,
+          "timed_out": false,
+          "elapsed": 10.69,
+          "exit_code": 0,
+          "stderr_tail": "Cloning into '/tmp/region_test_r2/clone_6'...\n"
+        },
+        {
+          "idx": 7,
+          "success": true,
+          "timed_out": false,
+          "elapsed": 8.32,
+          "exit_code": 0,
+          "stderr_tail": "Cloning into '/tmp/region_test_r2/clone_7'...\n"
+        },
+        {
+          "idx": 8,
+          "success": true,
+          "timed_out": false,
+          "elapsed": 6.49,
+          "exit_code": 0,
+          "stderr_tail": "Cloning into '/tmp/region_test_r2/clone_8'...\n"
+        },
+        {
+          "idx": 9,
+          "success": true,
+          "timed_out": false,
+          "elapsed": 4.04,
+          "exit_code": 0,
+          "stderr_tail": "Cloning into '/tmp/region_test_r2/clone_9'...\n"
+        }
+      ]
+    },
+    {
+      "round": 3,
+      "region": "Korea",
+      "concurrency": 20,
+      "timeout": 15,
+      "wall_time": 14.91,
+      "ok": 20,
+      "failed": 0,
+      "timed_out": 0,
+      "avg_elapsed": 10.72,
+      "max_elapsed": 14.91,
+      "results": [
+        {
+          "idx": 0,
+          "success": true,
+          "timed_out": false,
+          "elapsed": 7.36,
+          "exit_code": 0,
+          "stderr_tail": "Cloning into '/tmp/region_test_r3/clone_0'...\n"
+        },
+        {
+          "idx": 1,
+          "success": true,
+          "timed_out": false,
+          "elapsed": 14.91,
+          "exit_code": 0,
+          "stderr_tail": "ting files:  93% (6596/7092)\rUpdating files:  94% (6667/7092)\rUpdating files:  95% (6738/7092)\rUpdating files:  96% (6809/7092)\rUpdating files:  97% (6880/7092)\rUpdating files:  98% (6951/7092)\rUpdating files:  99% (7022/7092)\rUpdating files: 100% (7092/7092)\rUpdating files: 100% (7092/7092), done.\n"
+        },
+        {
+          "idx": 2,
+          "success": true,
+          "timed_out": false,
+          "elapsed": 14.08,
+          "exit_code": 0,
+          "stderr_tail": "ting files:  93% (6596/7092)\rUpdating files:  94% (6667/7092)\rUpdating files:  95% (6738/7092)\rUpdating files:  96% (6809/7092)\rUpdating files:  97% (6880/7092)\rUpdating files:  98% (6951/7092)\rUpdating files:  99% (7022/7092)\rUpdating files: 100% (7092/7092)\rUpdating files: 100% (7092/7092), done.\n"
+        },
+        {
+          "idx": 3,
+          "success": true,
+          "timed_out": false,
+          "elapsed": 14.81,
+          "exit_code": 0,
+          "stderr_tail": "ting files:  93% (6596/7092)\rUpdating files:  94% (6667/7092)\rUpdating files:  95% (6738/7092)\rUpdating files:  96% (6809/7092)\rUpdating files:  97% (6880/7092)\rUpdating files:  98% (6951/7092)\rUpdating files:  99% (7022/7092)\rUpdating files: 100% (7092/7092)\rUpdating files: 100% (7092/7092), done.\n"
+        },
+        {
+          "idx": 4,
+          "success": true,
+          "timed_out": false,
+          "elapsed": 6.27,
+          "exit_code": 0,
+          "stderr_tail": "Cloning into '/tmp/region_test_r3/clone_4'...\n"
+        },
+        {
+          "idx": 5,
+          "success": true,
+          "timed_out": false,
+          "elapsed": 14.52,
+          "exit_code": 0,
+          "stderr_tail": "ting files:  93% (6596/7092)\rUpdating files:  94% (6667/7092)\rUpdating files:  95% (6738/7092)\rUpdating files:  96% (6809/7092)\rUpdating files:  97% (6880/7092)\rUpdating files:  98% (6951/7092)\rUpdating files:  99% (7022/7092)\rUpdating files: 100% (7092/7092)\rUpdating files: 100% (7092/7092), done.\n"
+        },
+        {
+          "idx": 6,
+          "success": true,
+          "timed_out": false,
+          "elapsed": 7.67,
+          "exit_code": 0,
+          "stderr_tail": "Cloning into '/tmp/region_test_r3/clone_6'...\n"
+        },
+        {
+          "idx": 7,
+          "success": true,
+          "timed_out": false,
+          "elapsed": 10.65,
+          "exit_code": 0,
+          "stderr_tail": "Cloning into '/tmp/region_test_r3/clone_7'...\n"
+        },
+        {
+          "idx": 8,
+          "success": true,
+          "timed_out": false,
+          "elapsed": 6.71,
+          "exit_code": 0,
+          "stderr_tail": "Cloning into '/tmp/region_test_r3/clone_8'...\n"
+        },
+        {
+          "idx": 9,
+          "success": true,
+          "timed_out": false,
+          "elapsed": 4.2,
+          "exit_code": 0,
+          "stderr_tail": "Cloning into '/tmp/region_test_r3/clone_9'...\n"
+        },
+        {
+          "idx": 10,
+          "success": true,
+          "timed_out": false,
+          "elapsed": 14.66,
+          "exit_code": 0,
+          "stderr_tail": "ting files:  93% (6596/7092)\rUpdating files:  94% (6667/7092)\rUpdating files:  95% (6738/7092)\rUpdating files:  96% (6809/7092)\rUpdating files:  97% (6880/7092)\rUpdating files:  98% (6951/7092)\rUpdating files:  99% (7022/7092)\rUpdating files: 100% (7092/7092)\rUpdating files: 100% (7092/7092), done.\n"
+        },
+        {
+          "idx": 11,
+          "success": true,
+          "timed_out": false,
+          "elapsed": 6.68,
+          "exit_code": 0,
+          "stderr_tail": "Cloning into '/tmp/region_test_r3/clone_11'...\n"
+        },
+        {
+          "idx": 12,
+          "success": true,
+          "timed_out": false,
+          "elapsed": 8.66,
+          "exit_code": 0,
+          "stderr_tail": "Cloning into '/tmp/region_test_r3/clone_12'...\n"
+        },
+        {
+          "idx": 13,
+          "success": true,
+          "timed_out": false,
+          "elapsed": 14.03,
+          "exit_code": 0,
+          "stderr_tail": "Cloning into '/tmp/region_test_r3/clone_13'...\nUpdating files:  99% (7088/7092)\rUpdating files: 100% (7092/7092)\rUpdating files: 100% (7092/7092), done.\n"
+        },
+        {
+          "idx": 14,
+          "success": true,
+          "timed_out": false,
+          "elapsed": 10.23,
+          "exit_code": 0,
+          "stderr_tail": "Cloning into '/tmp/region_test_r3/clone_14'...\n"
+        },
+        {
+          "idx": 15,
+          "success": true,
+          "timed_out": false,
+          "elapsed": 14.78,
+          "exit_code": 0,
+          "stderr_tail": "ting files:  93% (6596/7092)\rUpdating files:  94% (6667/7092)\rUpdating files:  95% (6738/7092)\rUpdating files:  96% (6809/7092)\rUpdating files:  97% (6880/7092)\rUpdating files:  98% (6951/7092)\rUpdating files:  99% (7022/7092)\rUpdating files: 100% (7092/7092)\rUpdating files: 100% (7092/7092), done.\n"
+        },
+        {
+          "idx": 16,
+          "success": true,
+          "timed_out": false,
+          "elapsed": 13.31,
+          "exit_code": 0,
+          "stderr_tail": "Cloning into '/tmp/region_test_r3/clone_16'...\n"
+        },
+        {
+          "idx": 17,
+          "success": true,
+          "timed_out": false,
+          "elapsed": 5.81,
+          "exit_code": 0,
+          "stderr_tail": "Cloning into '/tmp/region_test_r3/clone_17'...\n"
+        },
+        {
+          "idx": 18,
+          "success": true,
+          "timed_out": false,
+          "elapsed": 11.23,
+          "exit_code": 0,
+          "stderr_tail": "Cloning into '/tmp/region_test_r3/clone_18'...\n"
+        },
+        {
+          "idx": 19,
+          "success": true,
+          "timed_out": false,
+          "elapsed": 13.92,
+          "exit_code": 0,
+          "stderr_tail": "ting files:  93% (6596/7092)\rUpdating files:  94% (6667/7092)\rUpdating files:  95% (6738/7092)\rUpdating files:  96% (6809/7092)\rUpdating files:  97% (6880/7092)\rUpdating files:  98% (6951/7092)\rUpdating files:  99% (7022/7092)\rUpdating files: 100% (7092/7092)\rUpdating files: 100% (7092/7092), done.\n"
+        }
+      ]
+    },
+    {
+      "round": 4,
+      "region": "Korea",
+      "concurrency": 30,
+      "timeout": 10,
+      "wall_time": 10.14,
+      "ok": 5,
+      "failed": 25,
+      "timed_out": 25,
+      "avg_elapsed": 9.62,
+      "max_elapsed": 10.07,
+      "results": [
+        {
+          "idx": 0,
+          "success": false,
+          "timed_out": true,
+          "elapsed": 10.06,
+          "exit_code": -1,
+          "stderr_tail": "Cloning into '/tmp/region_test_r4/clone_0'...\nfatal: early EOF\n"
+        },
+        {
+          "idx": 1,
+          "success": false,
+          "timed_out": true,
+          "elapsed": 10.06,
+          "exit_code": -1,
+          "stderr_tail": "Cloning into '/tmp/region_test_r4/clone_1'...\nfatal: early EOF\n"
+        },
+        {
+          "idx": 2,
+          "success": false,
+          "timed_out": true,
+          "elapsed": 10.06,
+          "exit_code": -1,
+          "stderr_tail": "Cloning into '/tmp/region_test_r4/clone_2'...\nfatal: early EOF\n"
+        },
+        {
+          "idx": 3,
+          "success": false,
+          "timed_out": true,
+          "elapsed": 10.06,
+          "exit_code": -1,
+          "stderr_tail": "Cloning into '/tmp/region_test_r4/clone_3'...\nfatal: early EOF\n"
+        },
+        {
+          "idx": 4,
+          "success": false,
+          "timed_out": true,
+          "elapsed": 10.06,
+          "exit_code": -1,
+          "stderr_tail": "Cloning into '/tmp/region_test_r4/clone_4'...\nfatal: early EOF\n"
+        },
+        {
+          "idx": 5,
+          "success": false,
+          "timed_out": true,
+          "elapsed": 10.07,
+          "exit_code": -1,
+          "stderr_tail": "Cloning into '/tmp/region_test_r4/clone_5'...\nfatal: early EOF\n"
+        },
+        {
+          "idx": 6,
+          "success": false,
+          "timed_out": true,
+          "elapsed": 10.06,
+          "exit_code": -1,
+          "stderr_tail": "Cloning into '/tmp/region_test_r4/clone_6'...\nfatal: early EOF\n"
+        },
+        {
+          "idx": 7,
+          "success": false,
+          "timed_out": true,
+          "elapsed": 10.06,
+          "exit_code": -1,
+          "stderr_tail": "Cloning into '/tmp/region_test_r4/clone_7'...\nfatal: early EOF\n"
+        },
+        {
+          "idx": 8,
+          "success": false,
+          "timed_out": true,
+          "elapsed": 10.06,
+          "exit_code": -1,
+          "stderr_tail": "Cloning into '/tmp/region_test_r4/clone_8'...\nfatal: early EOF\n"
+        },
+        {
+          "idx": 9,
+          "success": false,
+          "timed_out": true,
+          "elapsed": 10.05,
+          "exit_code": -1,
+          "stderr_tail": "Cloning into '/tmp/region_test_r4/clone_9'...\nfatal: early EOF\n"
+        },
+        {
+          "idx": 10,
+          "success": true,
+          "timed_out": false,
+          "elapsed": 6.7,
+          "exit_code": 0,
+          "stderr_tail": "Cloning into '/tmp/region_test_r4/clone_10'...\n"
+        },
+        {
+          "idx": 11,
+          "success": false,
+          "timed_out": true,
+          "elapsed": 10.05,
+          "exit_code": -1,
+          "stderr_tail": "Cloning into '/tmp/region_test_r4/clone_11'...\nfatal: early EOF\n"
+        },
+        {
+          "idx": 12,
+          "success": true,
+          "timed_out": false,
+          "elapsed": 10.03,
+          "exit_code": 0,
+          "stderr_tail": "Cloning into '/tmp/region_test_r4/clone_12'...\n"
+        },
+        {
+          "idx": 13,
+          "success": false,
+          "timed_out": true,
+          "elapsed": 10.04,
+          "exit_code": -1,
+          "stderr_tail": "Cloning into '/tmp/region_test_r4/clone_13'...\nfatal: early EOF\n"
+        },
+        {
+          "idx": 14,
+          "success": false,
+          "timed_out": true,
+          "elapsed": 10.04,
+          "exit_code": -1,
+          "stderr_tail": "Cloning into '/tmp/region_test_r4/clone_14'...\nfatal: early EOF\n"
+        },
+        {
+          "idx": 15,
+          "success": false,
+          "timed_out": true,
+          "elapsed": 10.04,
+          "exit_code": -1,
+          "stderr_tail": "Cloning into '/tmp/region_test_r4/clone_15'...\nfatal: early EOF\n"
+        },
+        {
+          "idx": 16,
+          "success": false,
+          "timed_out": true,
+          "elapsed": 10.04,
+          "exit_code": -1,
+          "stderr_tail": "Cloning into '/tmp/region_test_r4/clone_16'...\nfatal: early EOF\n"
+        },
+        {
+          "idx": 17,
+          "success": false,
+          "timed_out": true,
+          "elapsed": 10.04,
+          "exit_code": -1,
+          "stderr_tail": "Cloning into '/tmp/region_test_r4/clone_17'...\nfatal: early EOF\n"
+        },
+        {
+          "idx": 18,
+          "success": false,
+          "timed_out": true,
+          "elapsed": 10.04,
+          "exit_code": -1,
+          "stderr_tail": "Cloning into '/tmp/region_test_r4/clone_18'...\nfatal: early EOF\n"
+        },
+        {
+          "idx": 19,
+          "success": true,
+          "timed_out": false,
+          "elapsed": 9.18,
+          "exit_code": 0,
+          "stderr_tail": "Cloning into '/tmp/region_test_r4/clone_19'...\n"
+        },
+        {
+          "idx": 20,
+          "success": false,
+          "timed_out": true,
+          "elapsed": 10.04,
+          "exit_code": -1,
+          "stderr_tail": "Cloning into '/tmp/region_test_r4/clone_20'...\nfatal: early EOF\n"
+        },
+        {
+          "idx": 21,
+          "success": true,
+          "timed_out": false,
+          "elapsed": 6.88,
+          "exit_code": 0,
+          "stderr_tail": "Cloning into '/tmp/region_test_r4/clone_21'...\n"
+        },
+        {
+          "idx": 22,
+          "success": false,
+          "timed_out": true,
+          "elapsed": 10.03,
+          "exit_code": -1,
+          "stderr_tail": "Cloning into '/tmp/region_test_r4/clone_22'...\nfatal: early EOF\n"
+        },
+        {
+          "idx": 23,
+          "success": true,
+          "timed_out": false,
+          "elapsed": 4.75,
+          "exit_code": 0,
+          "stderr_tail": "Cloning into '/tmp/region_test_r4/clone_23'...\n"
+        },
+        {
+          "idx": 24,
+          "success": false,
+          "timed_out": true,
+          "elapsed": 10.03,
+          "exit_code": -1,
+          "stderr_tail": "Cloning into '/tmp/region_test_r4/clone_24'...\nfatal: early EOF\n"
+        },
+        {
+          "idx": 25,
+          "success": false,
+          "timed_out": true,
+          "elapsed": 10.03,
+          "exit_code": -1,
+          "stderr_tail": "Cloning into '/tmp/region_test_r4/clone_25'...\nfatal: early EOF\n"
+        },
+        {
+          "idx": 26,
+          "success": false,
+          "timed_out": true,
+          "elapsed": 10.03,
+          "exit_code": -1,
+          "stderr_tail": "Cloning into '/tmp/region_test_r4/clone_26'...\nfatal: early EOF\n"
+        },
+        {
+          "idx": 27,
+          "success": false,
+          "timed_out": true,
+          "elapsed": 10.03,
+          "exit_code": -1,
+          "stderr_tail": "Cloning into '/tmp/region_test_r4/clone_27'...\nfatal: early EOF\n"
+        },
+        {
+          "idx": 28,
+          "success": false,
+          "timed_out": true,
+          "elapsed": 10.02,
+          "exit_code": -1,
+          "stderr_tail": "Cloning into '/tmp/region_test_r4/clone_28'...\nfatal: early EOF\n"
+        },
+        {
+          "idx": 29,
+          "success": false,
+          "timed_out": true,
+          "elapsed": 10.02,
+          "exit_code": -1,
+          "stderr_tail": "Cloning into '/tmp/region_test_r4/clone_29'...\nfatal: early EOF\n"
+        }
+      ]
+    },
+    {
+      "round": 5,
+      "region": "Korea",
+      "concurrency": 50,
+      "timeout": 8,
+      "wall_time": 8.58,
+      "ok": 3,
+      "failed": 47,
+      "timed_out": 47,
+      "avg_elapsed": 8.27,
+      "max_elapsed": 8.46,
+      "results": [
+        {
+          "idx": 0,
+          "success": false,
+          "timed_out": true,
+          "elapsed": 8.46,
+          "exit_code": -1,
+          "stderr_tail": "Cloning into '/tmp/region_test_r5/clone_0'...\nfatal: early EOF\n"
+        },
+        {
+          "idx": 1,
+          "success": false,
+          "timed_out": true,
+          "elapsed": 8.46,
+          "exit_code": -1,
+          "stderr_tail": "Cloning into '/tmp/region_test_r5/clone_1'...\nfatal: early EOF\n"
+        },
+        {
+          "idx": 2,
+          "success": false,
+          "timed_out": true,
+          "elapsed": 8.46,
+          "exit_code": -1,
+          "stderr_tail": "Cloning into '/tmp/region_test_r5/clone_2'...\nfatal: early EOF\n"
+        },
+        {
+          "idx": 3,
+          "success": false,
+          "timed_out": true,
+          "elapsed": 8.46,
+          "exit_code": -1,
+          "stderr_tail": "Cloning into '/tmp/region_test_r5/clone_3'...\nfatal: early EOF\n"
+        },
+        {
+          "idx": 4,
+          "success": false,
+          "timed_out": true,
+          "elapsed": 8.46,
+          "exit_code": -1,
+          "stderr_tail": "Cloning into '/tmp/region_test_r5/clone_4'...\nfatal: early EOF\n"
+        },
+        {
+          "idx": 5,
+          "success": false,
+          "timed_out": true,
+          "elapsed": 8.46,
+          "exit_code": -1,
+          "stderr_tail": "Cloning into '/tmp/region_test_r5/clone_5'...\nfatal: early EOF\n"
+        },
+        {
+          "idx": 6,
+          "success": false,
+          "timed_out": true,
+          "elapsed": 8.46,
+          "exit_code": -1,
+          "stderr_tail": "Cloning into '/tmp/region_test_r5/clone_6'...\nfatal: early EOF\n"
+        },
+        {
+          "idx": 7,
+          "success": false,
+          "timed_out": true,
+          "elapsed": 8.46,
+          "exit_code": -1,
+          "stderr_tail": "Cloning into '/tmp/region_test_r5/clone_7'...\nfatal: early EOF\n"
+        },
+        {
+          "idx": 8,
+          "success": false,
+          "timed_out": true,
+          "elapsed": 8.46,
+          "exit_code": -1,
+          "stderr_tail": "Cloning into '/tmp/region_test_r5/clone_8'...\nfatal: early EOF\n"
+        },
+        {
+          "idx": 9,
+          "success": false,
+          "timed_out": true,
+          "elapsed": 8.46,
+          "exit_code": -1,
+          "stderr_tail": "Cloning into '/tmp/region_test_r5/clone_9'...\nfatal: early EOF\n"
+        },
+        {
+          "idx": 10,
+          "success": false,
+          "timed_out": true,
+          "elapsed": 8.46,
+          "exit_code": -1,
+          "stderr_tail": "Cloning into '/tmp/region_test_r5/clone_10'...\nfatal: early EOF\n"
+        },
+        {
+          "idx": 11,
+          "success": false,
+          "timed_out": true,
+          "elapsed": 8.46,
+          "exit_code": -1,
+          "stderr_tail": "Cloning into '/tmp/region_test_r5/clone_11'...\nfatal: early EOF\n"
+        },
+        {
+          "idx": 12,
+          "success": false,
+          "timed_out": true,
+          "elapsed": 8.46,
+          "exit_code": -1,
+          "stderr_tail": "Cloning into '/tmp/region_test_r5/clone_12'...\nfatal: early EOF\n"
+        },
+        {
+          "idx": 13,
+          "success": false,
+          "timed_out": true,
+          "elapsed": 8.46,
+          "exit_code": -1,
+          "stderr_tail": "Cloning into '/tmp/region_test_r5/clone_13'...\nfatal: early EOF\n"
+        },
+        {
+          "idx": 14,
+          "success": false,
+          "timed_out": true,
+          "elapsed": 8.45,
+          "exit_code": -1,
+          "stderr_tail": "Cloning into '/tmp/region_test_r5/clone_14'...\nfatal: early EOF\n"
+        },
+        {
+          "idx": 15,
+          "success": true,
+          "timed_out": false,
+          "elapsed": 5.59,
+          "exit_code": 0,
+          "stderr_tail": "Cloning into '/tmp/region_test_r5/clone_15'...\n"
+        },
+        {
+          "idx": 16,
+          "success": false,
+          "timed_out": true,
+          "elapsed": 8.45,
+          "exit_code": -1,
+          "stderr_tail": "Cloning into '/tmp/region_test_r5/clone_16'...\nfatal: early EOF\n"
+        },
+        {
+          "idx": 17,
+          "success": false,
+          "timed_out": true,
+          "elapsed": 8.45,
+          "exit_code": -1,
+          "stderr_tail": "Cloning into '/tmp/region_test_r5/clone_17'...\nfatal: early EOF\n"
+        },
+        {
+          "idx": 18,
+          "success": false,
+          "timed_out": true,
+          "elapsed": 8.45,
+          "exit_code": -1,
+          "stderr_tail": "Cloning into '/tmp/region_test_r5/clone_18'...\nfatal: early EOF\n"
+        },
+        {
+          "idx": 19,
+          "success": false,
+          "timed_out": true,
+          "elapsed": 8.45,
+          "exit_code": -1,
+          "stderr_tail": "Cloning into '/tmp/region_test_r5/clone_19'...\nfatal: early EOF\n"
+        },
+        {
+          "idx": 20,
+          "success": false,
+          "timed_out": true,
+          "elapsed": 8.45,
+          "exit_code": -1,
+          "stderr_tail": "Cloning into '/tmp/region_test_r5/clone_20'...\nfatal: early EOF\n"
+        },
+        {
+          "idx": 21,
+          "success": true,
+          "timed_out": false,
+          "elapsed": 5.29,
+          "exit_code": 0,
+          "stderr_tail": "Cloning into '/tmp/region_test_r5/clone_21'...\n"
+        },
+        {
+          "idx": 22,
+          "success": false,
+          "timed_out": true,
+          "elapsed": 8.45,
+          "exit_code": -1,
+          "stderr_tail": "Cloning into '/tmp/region_test_r5/clone_22'...\nfatal: early EOF\n"
+        },
+        {
+          "idx": 23,
+          "success": false,
+          "timed_out": true,
+          "elapsed": 8.45,
+          "exit_code": -1,
+          "stderr_tail": "Cloning into '/tmp/region_test_r5/clone_23'...\nfatal: early EOF\n"
+        },
+        {
+          "idx": 24,
+          "success": false,
+          "timed_out": true,
+          "elapsed": 8.44,
+          "exit_code": -1,
+          "stderr_tail": "Cloning into '/tmp/region_test_r5/clone_24'...\nfatal: early EOF\n"
+        },
+        {
+          "idx": 25,
+          "success": false,
+          "timed_out": true,
+          "elapsed": 8.44,
+          "exit_code": -1,
+          "stderr_tail": "Cloning into '/tmp/region_test_r5/clone_25'...\nfatal: early EOF\n"
+        },
+        {
+          "idx": 26,
+          "success": false,
+          "timed_out": true,
+          "elapsed": 8.43,
+          "exit_code": -1,
+          "stderr_tail": "Cloning into '/tmp/region_test_r5/clone_26'...\nfatal: early EOF\n"
+        },
+        {
+          "idx": 27,
+          "success": false,
+          "timed_out": true,
+          "elapsed": 8.43,
+          "exit_code": -1,
+          "stderr_tail": "Cloning into '/tmp/region_test_r5/clone_27'...\nfatal: early EOF\n"
+        },
+        {
+          "idx": 28,
+          "success": false,
+          "timed_out": true,
+          "elapsed": 8.43,
+          "exit_code": -1,
+          "stderr_tail": "Cloning into '/tmp/region_test_r5/clone_28'...\nfatal: early EOF\n"
+        },
+        {
+          "idx": 29,
+          "success": true,
+          "timed_out": false,
+          "elapsed": 7.56,
+          "exit_code": 0,
+          "stderr_tail": "Cloning into '/tmp/region_test_r5/clone_29'...\n"
+        },
+        {
+          "idx": 30,
+          "success": false,
+          "timed_out": true,
+          "elapsed": 8.41,
+          "exit_code": -1,
+          "stderr_tail": "Cloning into '/tmp/region_test_r5/clone_30'...\nfatal: early EOF\n"
+        },
+        {
+          "idx": 31,
+          "success": false,
+          "timed_out": true,
+          "elapsed": 8.41,
+          "exit_code": -1,
+          "stderr_tail": "Cloning into '/tmp/region_test_r5/clone_31'...\nfatal: early EOF\n"
+        },
+        {
+          "idx": 32,
+          "success": false,
+          "timed_out": true,
+          "elapsed": 8.41,
+          "exit_code": -1,
+          "stderr_tail": "Cloning into '/tmp/region_test_r5/clone_32'...\nfatal: early EOF\n"
+        },
+        {
+          "idx": 33,
+          "success": false,
+          "timed_out": true,
+          "elapsed": 8.41,
+          "exit_code": -1,
+          "stderr_tail": "Cloning into '/tmp/region_test_r5/clone_33'...\nfatal: early EOF\n"
+        },
+        {
+          "idx": 34,
+          "success": false,
+          "timed_out": true,
+          "elapsed": 8.41,
+          "exit_code": -1,
+          "stderr_tail": "Cloning into '/tmp/region_test_r5/clone_34'...\nfatal: early EOF\n"
+        },
+        {
+          "idx": 35,
+          "success": false,
+          "timed_out": true,
+          "elapsed": 8.4,
+          "exit_code": -1,
+          "stderr_tail": "Cloning into '/tmp/region_test_r5/clone_35'...\nfatal: early EOF\n"
+        },
+        {
+          "idx": 36,
+          "success": false,
+          "timed_out": true,
+          "elapsed": 8.4,
+          "exit_code": -1,
+          "stderr_tail": "Cloning into '/tmp/region_test_r5/clone_36'...\nfatal: early EOF\n"
+        },
+        {
+          "idx": 37,
+          "success": false,
+          "timed_out": true,
+          "elapsed": 8.4,
+          "exit_code": -1,
+          "stderr_tail": "Cloning into '/tmp/region_test_r5/clone_37'...\nfatal: early EOF\n"
+        },
+        {
+          "idx": 38,
+          "success": false,
+          "timed_out": true,
+          "elapsed": 8.4,
+          "exit_code": -1,
+          "stderr_tail": "Cloning into '/tmp/region_test_r5/clone_38'...\nfatal: early EOF\n"
+        },
+        {
+          "idx": 39,
+          "success": false,
+          "timed_out": true,
+          "elapsed": 8.43,
+          "exit_code": -1,
+          "stderr_tail": "Cloning into '/tmp/region_test_r5/clone_39'...\nfatal: early EOF\n"
+        },
+        {
+          "idx": 40,
+          "success": false,
+          "timed_out": true,
+          "elapsed": 8.42,
+          "exit_code": -1,
+          "stderr_tail": "Cloning into '/tmp/region_test_r5/clone_40'...\nfatal: early EOF\n"
+        },
+        {
+          "idx": 41,
+          "success": false,
+          "timed_out": true,
+          "elapsed": 8.42,
+          "exit_code": -1,
+          "stderr_tail": "Cloning into '/tmp/region_test_r5/clone_41'...\nfatal: early EOF\n"
+        },
+        {
+          "idx": 42,
+          "success": false,
+          "timed_out": true,
+          "elapsed": 8.3,
+          "exit_code": -1,
+          "stderr_tail": "Cloning into '/tmp/region_test_r5/clone_42'...\nfatal: early EOF\n"
+        },
+        {
+          "idx": 43,
+          "success": false,
+          "timed_out": true,
+          "elapsed": 8.3,
+          "exit_code": -1,
+          "stderr_tail": "Cloning into '/tmp/region_test_r5/clone_43'...\nfatal: early EOF\n"
+        },
+        {
+          "idx": 44,
+          "success": false,
+          "timed_out": true,
+          "elapsed": 8.27,
+          "exit_code": -1,
+          "stderr_tail": "Cloning into '/tmp/region_test_r5/clone_44'...\nfatal: early EOF\n"
+        },
+        {
+          "idx": 45,
+          "success": false,
+          "timed_out": true,
+          "elapsed": 8.22,
+          "exit_code": -1,
+          "stderr_tail": "Cloning into '/tmp/region_test_r5/clone_45'...\nfatal: early EOF\n"
+        },
+        {
+          "idx": 46,
+          "success": false,
+          "timed_out": true,
+          "elapsed": 8.22,
+          "exit_code": -1,
+          "stderr_tail": "Cloning into '/tmp/region_test_r5/clone_46'...\nfatal: early EOF\n"
+        },
+        {
+          "idx": 47,
+          "success": false,
+          "timed_out": true,
+          "elapsed": 8.16,
+          "exit_code": -1,
+          "stderr_tail": "Cloning into '/tmp/region_test_r5/clone_47'...\nfatal: early EOF\n"
+        },
+        {
+          "idx": 48,
+          "success": false,
+          "timed_out": true,
+          "elapsed": 8.12,
+          "exit_code": -1,
+          "stderr_tail": "Cloning into '/tmp/region_test_r5/clone_48'...\nfatal: early EOF\n"
+        },
+        {
+          "idx": 49,
+          "success": false,
+          "timed_out": true,
+          "elapsed": 8.09,
+          "exit_code": -1,
+          "stderr_tail": "Cloning into '/tmp/region_test_r5/clone_49'...\nfatal: early EOF\n"
+        }
+      ]
+    }
+  ]
+}
