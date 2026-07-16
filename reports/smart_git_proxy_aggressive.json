@@ -1,0 +1,92 @@
+{
+  "meta": {
+    "timestamp": "2026-07-16 11:16:48",
+    "repo": "https://github.com/sgl-project/sglang.git",
+    "proxy_url": "http://localhost:18080",
+    "scenarios": [
+      {
+        "concurrency": 20,
+        "timeout": 15.0
+      },
+      {
+        "concurrency": 30,
+        "timeout": 10.0
+      },
+      {
+        "concurrency": 50,
+        "timeout": 8.0
+      }
+    ],
+    "notes": "Reuses aggressive params from prior 504_test_report.json: c=20/t=15, c=30/t=10, c=50/t=8"
+  },
+  "direct": [
+    {
+      "concurrency": 20,
+      "success": 9,
+      "failed": 11,
+      "timed_out": 11,
+      "early_eof": 8,
+      "wall_time": 15.06,
+      "avg_elapsed": 13.19,
+      "max_elapsed": 15.05,
+      "timeout": 15.0
+    },
+    {
+      "concurrency": 30,
+      "success": 4,
+      "failed": 26,
+      "timed_out": 26,
+      "early_eof": 25,
+      "wall_time": 10.58,
+      "avg_elapsed": 9.85,
+      "max_elapsed": 10.19,
+      "timeout": 10.0
+    },
+    {
+      "concurrency": 50,
+      "success": 0,
+      "failed": 50,
+      "timed_out": 50,
+      "early_eof": 50,
+      "wall_time": 9.73,
+      "avg_elapsed": 8.37,
+      "max_elapsed": 8.47,
+      "timeout": 8.0
+    }
+  ],
+  "via_smart_git_proxy": [
+    {
+      "concurrency": 20,
+      "success": 0,
+      "failed": 20,
+      "timed_out": 20,
+      "early_eof": 18,
+      "wall_time": 15.14,
+      "avg_elapsed": 15.04,
+      "max_elapsed": 15.05,
+      "timeout": 15.0
+    },
+    {
+      "concurrency": 30,
+      "success": 0,
+      "failed": 30,
+      "timed_out": 30,
+      "early_eof": 0,
+      "wall_time": 14.18,
+      "avg_elapsed": 10.43,
+      "max_elapsed": 10.58,
+      "timeout": 10.0
+    },
+    {
+      "concurrency": 50,
+      "success": 0,
+      "failed": 50,
+      "timed_out": 50,
+      "early_eof": 0,
+      "wall_time": 26.89,
+      "avg_elapsed": 8.09,
+      "max_elapsed": 8.14,
+      "timeout": 8.0
+    }
+  ]
+}

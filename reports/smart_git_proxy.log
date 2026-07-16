@@ -1,0 +1,46 @@
+{"time":"2026-07-16T10:09:35.274452672+08:00","level":"INFO","msg":"listening","addr":":18080","mirror_dir":"/tmp/git-mirrors","allowed_upstreams":["github.com"],"sync_stale_after":30000000000}
+{"time":"2026-07-16T10:09:45.829255542+08:00","level":"INFO","msg":"cloning mirror","path":"/tmp/git-mirrors/github.com/sgl-project/sglang.git","upstream":"https://github.com/sgl-project/sglang.git","hasAuth":false}
+{"time":"2026-07-16T10:12:37.464177887+08:00","level":"INFO","msg":"clone complete","path":"/tmp/git-mirrors/github.com/sgl-project/sglang.git","total_duration_ms":171634}
+{"time":"2026-07-16T10:12:37.464253964+08:00","level":"INFO","msg":"request","repo":"github.com/sgl-project/sglang","status":"mirror-clone"}
+{"time":"2026-07-16T10:13:22.632908039+08:00","level":"INFO","msg":"repo optimization complete","path":"/tmp/git-mirrors/github.com/sgl-project/sglang.git","full":true,"total_duration_ms":45168}
+{"time":"2026-07-16T10:36:59.318255765+08:00","level":"INFO","msg":"cloning mirror","path":"/tmp/git-mirrors/github.com/sgl-project/sglang.git","upstream":"https://github.com/sgl-project/sglang.git","hasAuth":false}
+{"time":"2026-07-16T10:39:31.886660238+08:00","level":"INFO","msg":"clone complete","path":"/tmp/git-mirrors/github.com/sgl-project/sglang.git","total_duration_ms":152568}
+{"time":"2026-07-16T10:39:31.886704838+08:00","level":"INFO","msg":"request","repo":"github.com/sgl-project/sglang","status":"mirror-clone"}
+{"time":"2026-07-16T10:40:13.926539249+08:00","level":"INFO","msg":"repo optimization complete","path":"/tmp/git-mirrors/github.com/sgl-project/sglang.git","full":true,"total_duration_ms":42039}
+{"time":"2026-07-16T10:40:31.750601709+08:00","level":"INFO","msg":"request","repo":"github.com/sgl-project/sglang","status":"mirror-sync"}
+{"time":"2026-07-16T10:40:31.750672477+08:00","level":"INFO","msg":"request","repo":"github.com/sgl-project/sglang","status":"mirror-sync"}
+{"time":"2026-07-16T10:40:31.750710752+08:00","level":"INFO","msg":"request","repo":"github.com/sgl-project/sglang","status":"mirror-sync"}
+{"time":"2026-07-16T10:40:31.750667486+08:00","level":"INFO","msg":"request","repo":"github.com/sgl-project/sglang","status":"mirror-sync"}
+{"time":"2026-07-16T10:40:31.750621553+08:00","level":"INFO","msg":"request","repo":"github.com/sgl-project/sglang","status":"mirror-sync"}
+{"time":"2026-07-16T10:40:43.963011787+08:00","level":"INFO","msg":"request","repo":"github.com/sgl-project/sglang","status":"mirror-hit"}
+{"time":"2026-07-16T10:40:43.96301357+08:00","level":"INFO","msg":"request","repo":"github.com/sgl-project/sglang","status":"mirror-hit"}
+{"time":"2026-07-16T10:40:43.963392952+08:00","level":"INFO","msg":"request","repo":"github.com/sgl-project/sglang","status":"mirror-hit"}
+{"time":"2026-07-16T10:40:43.964375322+08:00","level":"INFO","msg":"request","repo":"github.com/sgl-project/sglang","status":"mirror-hit"}
+{"time":"2026-07-16T10:40:43.964712844+08:00","level":"INFO","msg":"request","repo":"github.com/sgl-project/sglang","status":"mirror-hit"}
+{"time":"2026-07-16T10:40:43.965313414+08:00","level":"INFO","msg":"request","repo":"github.com/sgl-project/sglang","status":"mirror-hit"}
+{"time":"2026-07-16T10:40:43.970271747+08:00","level":"INFO","msg":"request","repo":"github.com/sgl-project/sglang","status":"mirror-hit"}
+{"time":"2026-07-16T10:40:43.970322886+08:00","level":"INFO","msg":"request","repo":"github.com/sgl-project/sglang","status":"mirror-hit"}
+{"time":"2026-07-16T10:40:43.973179058+08:00","level":"INFO","msg":"request","repo":"github.com/sgl-project/sglang","status":"mirror-hit"}
+{"time":"2026-07-16T10:40:44.006002328+08:00","level":"INFO","msg":"request","repo":"github.com/sgl-project/sglang","status":"mirror-hit"}
+{"time":"2026-07-16T10:40:44.094651603+08:00","level":"INFO","msg":"repo optimization complete","path":"/tmp/git-mirrors/github.com/sgl-project/sglang.git","full":false,"total_duration_ms":12343}
+{"time":"2026-07-16T10:41:03.466979272+08:00","level":"INFO","msg":"request","repo":"github.com/sgl-project/sglang","status":"mirror-sync"}
+{"time":"2026-07-16T10:41:03.467008546+08:00","level":"INFO","msg":"request","repo":"github.com/sgl-project/sglang","status":"mirror-sync"}
+{"time":"2026-07-16T10:41:03.467048449+08:00","level":"INFO","msg":"request","repo":"github.com/sgl-project/sglang","status":"mirror-sync"}
+{"time":"2026-07-16T10:41:03.46705916+08:00","level":"INFO","msg":"request","repo":"github.com/sgl-project/sglang","status":"mirror-sync"}
+{"time":"2026-07-16T10:41:03.467104522+08:00","level":"INFO","msg":"request","repo":"github.com/sgl-project/sglang","status":"mirror-sync"}
+{"time":"2026-07-16T10:41:03.466992776+08:00","level":"INFO","msg":"request","repo":"github.com/sgl-project/sglang","status":"mirror-sync"}
+{"time":"2026-07-16T10:41:03.467041117+08:00","level":"INFO","msg":"request","repo":"github.com/sgl-project/sglang","status":"mirror-sync"}
+{"time":"2026-07-16T10:41:03.46698213+08:00","level":"INFO","msg":"request","repo":"github.com/sgl-project/sglang","status":"mirror-sync"}
+{"time":"2026-07-16T10:41:03.467022105+08:00","level":"INFO","msg":"request","repo":"github.com/sgl-project/sglang","status":"mirror-sync"}
+{"time":"2026-07-16T10:41:03.46763236+08:00","level":"INFO","msg":"request","repo":"github.com/sgl-project/sglang","status":"mirror-sync"}
+{"time":"2026-07-16T10:41:03.467112115+08:00","level":"INFO","msg":"request","repo":"github.com/sgl-project/sglang","status":"mirror-sync"}
+{"time":"2026-07-16T10:41:03.467259626+08:00","level":"INFO","msg":"request","repo":"github.com/sgl-project/sglang","status":"mirror-sync"}
+{"time":"2026-07-16T10:41:03.468127832+08:00","level":"INFO","msg":"request","repo":"github.com/sgl-project/sglang","status":"mirror-sync"}
+{"time":"2026-07-16T10:41:03.469450501+08:00","level":"INFO","msg":"request","repo":"github.com/sgl-project/sglang","status":"mirror-sync"}
+{"time":"2026-07-16T10:41:03.469543797+08:00","level":"INFO","msg":"request","repo":"github.com/sgl-project/sglang","status":"mirror-sync"}
+{"time":"2026-07-16T10:41:03.469796643+08:00","level":"INFO","msg":"request","repo":"github.com/sgl-project/sglang","status":"mirror-sync"}
+{"time":"2026-07-16T10:41:03.467068307+08:00","level":"INFO","msg":"request","repo":"github.com/sgl-project/sglang","status":"mirror-sync"}
+{"time":"2026-07-16T10:41:03.467044271+08:00","level":"INFO","msg":"request","repo":"github.com/sgl-project/sglang","status":"mirror-sync"}
+{"time":"2026-07-16T10:41:03.49402563+08:00","level":"INFO","msg":"request","repo":"github.com/sgl-project/sglang","status":"mirror-sync"}
+{"time":"2026-07-16T10:41:03.49404125+08:00","level":"INFO","msg":"request","repo":"github.com/sgl-project/sglang","status":"mirror-sync"}
+{"time":"2026-07-16T10:41:19.203026027+08:00","level":"INFO","msg":"repo optimization complete","path":"/tmp/git-mirrors/github.com/sgl-project/sglang.git","full":false,"total_duration_ms":15736}

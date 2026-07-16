@@ -208,12 +208,17 @@ async def git_clone_one(
     repo_url: str,
     clone_dir: str,
     clone_timeout: float = 60.0,
+    proxy_url: str | None = None,
 ) -> GitCloneResult:
-    """执行一次 git clone，返回结果"""
+    """执行一次 git clone，返回结果。proxy_url 非空时通过 url.insteadOf 走 smart-git-proxy。"""
     start = time.monotonic()
     try:
+        cmd = ["git"]
+        if proxy_url:
+            cmd += ["-c", f'url.{proxy_url.rstrip("/")}/github.com/.insteadOf=https://github.com/']
+        cmd += ["clone", "--depth", "1", repo_url, clone_dir]
         proc = await asyncio.create_subprocess_exec(
-            "git", "clone", "--depth", "1", repo_url, clone_dir,
+            *cmd,
             stdout=asyncio.subprocess.PIPE,
             stderr=asyncio.subprocess.PIPE,
         )
@@ -262,20 +267,22 @@ async def run_git_round(
     concurrency: int,
     round_num: int,
     clone_timeout: float = 60.0,
+    proxy_url: str | None = None,
 ) -> RoundReport:
     """一轮 git clone 测试：并发 clone 同一仓库"""
     # 创建临时目录存放 clones
     base_dir = tempfile.mkdtemp(prefix=f"git_504_round{round_num}_")
 
     print(f"\n{'='*60}")
-    print(f"  Round {round_num} [GIT] | concurrency={concurrency} | clone_timeout={clone_timeout}s")
+    print(f"  Round {round_num} [GIT] | concurrency={concurrency} | clone_timeout={clone_timeout}s"
+          f"{' | via proxy: ' + proxy_url if proxy_url else ''}")
     print(f"  📁 Cloning into: {base_dir}")
     print(f"{'='*60}")
 
     tasks = []
     for i in range(concurrency):
         clone_dir = os.path.join(base_dir, f"clone_{i}")
-        tasks.append(git_clone_one(REPO_URL, clone_dir, clone_timeout))
+        tasks.append(git_clone_one(REPO_URL, clone_dir, clone_timeout, proxy_url=proxy_url))
 
     report = RoundReport(mode="git", concurrency=concurrency, total_requests=concurrency)
     report.start_time = time.monotonic()
@@ -435,7 +442,7 @@ async def run_mode_git(args):
 
     while round_num < args.rounds:
         round_num += 1
-        report = await run_git_round(concurrency, round_num, args.git_timeout)
+        report = await run_git_round(concurrency, round_num, args.git_timeout, proxy_url=args.proxy_url)
         all_reports.append(report)
 
         # 逐步加压
@@ -554,6 +561,10 @@ Examples:
     # proxy mode options
     parser.add_argument("--proxy-timeout", type=float, default=3.0,
                         help="Simulated proxy/gateway timeout in seconds (default: 3.0). Shorter = more 504s")
+
+    # smart-git-proxy comparison mode
+    parser.add_argument("--proxy-url", type=str, default=None,
+                        help="If set, route git clone via smart-git-proxy at this base URL (e.g. http://localhost:18080)")
 
     args = parser.parse_args()
     asyncio.run(main(args))

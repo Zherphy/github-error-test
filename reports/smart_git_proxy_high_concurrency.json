@@ -1,0 +1,106 @@
+{
+  "meta": {
+    "timestamp": "2026-07-16 16:05:10",
+    "repo": "https://github.com/sgl-project/sglang.git",
+    "proxy_url": "http://localhost:18080",
+    "timeout": 240.0,
+    "concurrencies_planned": [
+      50,
+      100
+    ],
+    "min_avail_mb": 2500.0,
+    "max_proxy_rss_mb": 8000.0,
+    "initial_mem_avail_mb": 10252.6,
+    "notes": "c=50 uses floor 1500MB (safe); c=100 uses floor 2500MB and triggered safety abort at the tail of clone phase (all 100 clones already returned)."
+  },
+  "rounds": [
+    {
+      "scenario": "direct",
+      "concurrency": 50,
+      "success": 50,
+      "failed": 0,
+      "timed_out": 0,
+      "early_eof": 0,
+      "http_5xx": 0,
+      "wall_time": 41.08,
+      "avg_elapsed": 32.86,
+      "max_elapsed": 41.01,
+      "sample_errors": [],
+      "timeout": 180.0,
+      "proxy_used": false,
+      "aborted": false,
+      "abort_reason": null,
+      "watchdog": {
+        "samples": 42,
+        "min_mem_avail_mb": 9658.5,
+        "max_proxy_rss_mb": 0.0
+      }
+    },
+    {
+      "scenario": "proxy",
+      "concurrency": 50,
+      "success": 50,
+      "failed": 0,
+      "timed_out": 0,
+      "early_eof": 0,
+      "http_5xx": 0,
+      "wall_time": 74.82,
+      "avg_elapsed": 68.03,
+      "max_elapsed": 74.82,
+      "sample_errors": [],
+      "timeout": 180.0,
+      "proxy_used": true,
+      "aborted": false,
+      "abort_reason": null,
+      "watchdog": {
+        "samples": 76,
+        "min_mem_avail_mb": 5576.4,
+        "max_proxy_rss_mb": 14.1
+      }
+    },
+    {
+      "scenario": "direct",
+      "concurrency": 100,
+      "success": 100,
+      "failed": 0,
+      "timed_out": 0,
+      "early_eof": 0,
+      "http_5xx": 0,
+      "wall_time": 102.73,
+      "avg_elapsed": 86.58,
+      "max_elapsed": 102.45,
+      "sample_errors": [],
+      "timeout": 240.0,
+      "proxy_used": false,
+      "aborted": false,
+      "abort_reason": null,
+      "watchdog": {
+        "samples": 103,
+        "min_mem_avail_mb": 9116.4,
+        "max_proxy_rss_mb": 0.0
+      }
+    },
+    {
+      "scenario": "proxy",
+      "concurrency": 100,
+      "success": 100,
+      "failed": 0,
+      "timed_out": 0,
+      "early_eof": 0,
+      "http_5xx": 0,
+      "wall_time": 152.65,
+      "avg_elapsed": 143.88,
+      "max_elapsed": 152.62,
+      "sample_errors": [],
+      "timeout": 240.0,
+      "proxy_used": true,
+      "aborted": true,
+      "abort_reason": "MemAvailable=2403MB < 2500.0MB",
+      "watchdog": {
+        "samples": 43,
+        "min_mem_avail_mb": 2403.0,
+        "max_proxy_rss_mb": 18.2
+      }
+    }
+  ]
+}

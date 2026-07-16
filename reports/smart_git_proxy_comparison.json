@@ -1,0 +1,579 @@
+{
+  "meta": {
+    "timestamp": "2026-07-16 10:36:59",
+    "repo": "https://github.com/sgl-project/sglang.git",
+    "proxy_url": "http://localhost:18080",
+    "concurrencies": [
+      5,
+      10,
+      20
+    ],
+    "timeout": 45.0
+  },
+  "cold_prime": {
+    "elapsed_sec": 156.24,
+    "mirror_size": "1.8G",
+    "success": true,
+    "stderr_tail": "Cloning into '/tmp/sgp_cold_prime'...\n"
+  },
+  "baseline_direct": [
+    {
+      "concurrency": 5,
+      "wall_time": 8.45,
+      "success": 5,
+      "failed": 0,
+      "timed_out": 0,
+      "avg_elapsed": 7.62,
+      "max_elapsed": 8.45,
+      "results": [
+        {
+          "success": true,
+          "elapsed": 8.45,
+          "exit_code": 0,
+          "timed_out": false,
+          "stderr_tail": "Cloning into '/tmp/git_504_round1_fh39vz4y/clone_0'...\n"
+        },
+        {
+          "success": true,
+          "elapsed": 8.4,
+          "exit_code": 0,
+          "timed_out": false,
+          "stderr_tail": "Cloning into '/tmp/git_504_round1_fh39vz4y/clone_1'...\n"
+        },
+        {
+          "success": true,
+          "elapsed": 6.48,
+          "exit_code": 0,
+          "timed_out": false,
+          "stderr_tail": "Cloning into '/tmp/git_504_round1_fh39vz4y/clone_2'...\n"
+        },
+        {
+          "success": true,
+          "elapsed": 8.34,
+          "exit_code": 0,
+          "timed_out": false,
+          "stderr_tail": "Cloning into '/tmp/git_504_round1_fh39vz4y/clone_3'...\n"
+        },
+        {
+          "success": true,
+          "elapsed": 6.42,
+          "exit_code": 0,
+          "timed_out": false,
+          "stderr_tail": "Cloning into '/tmp/git_504_round1_fh39vz4y/clone_4'...\n"
+        }
+      ]
+    },
+    {
+      "concurrency": 10,
+      "wall_time": 9.42,
+      "success": 10,
+      "failed": 0,
+      "timed_out": 0,
+      "avg_elapsed": 7.14,
+      "max_elapsed": 9.42,
+      "results": [
+        {
+          "success": true,
+          "elapsed": 7.86,
+          "exit_code": 0,
+          "timed_out": false,
+          "stderr_tail": "Cloning into '/tmp/git_504_round2_svzkn5kn/clone_0'...\n"
+        },
+        {
+          "success": true,
+          "elapsed": 9.42,
+          "exit_code": 0,
+          "timed_out": false,
+          "stderr_tail": "Cloning into '/tmp/git_504_round2_svzkn5kn/clone_1'...\n"
+        },
+        {
+          "success": true,
+          "elapsed": 6.18,
+          "exit_code": 0,
+          "timed_out": false,
+          "stderr_tail": "Cloning into '/tmp/git_504_round2_svzkn5kn/clone_2'...\n"
+        },
+        {
+          "success": true,
+          "elapsed": 8.25,
+          "exit_code": 0,
+          "timed_out": false,
+          "stderr_tail": "Cloning into '/tmp/git_504_round2_svzkn5kn/clone_3'...\n"
+        },
+        {
+          "success": true,
+          "elapsed": 7.37,
+          "exit_code": 0,
+          "timed_out": false,
+          "stderr_tail": "Cloning into '/tmp/git_504_round2_svzkn5kn/clone_4'...\n"
+        },
+        {
+          "success": true,
+          "elapsed": 8.38,
+          "exit_code": 0,
+          "timed_out": false,
+          "stderr_tail": "Cloning into '/tmp/git_504_round2_svzkn5kn/clone_5'...\n"
+        },
+        {
+          "success": true,
+          "elapsed": 4.8,
+          "exit_code": 0,
+          "timed_out": false,
+          "stderr_tail": "Cloning into '/tmp/git_504_round2_svzkn5kn/clone_6'...\n"
+        },
+        {
+          "success": true,
+          "elapsed": 7.19,
+          "exit_code": 0,
+          "timed_out": false,
+          "stderr_tail": "Cloning into '/tmp/git_504_round2_svzkn5kn/clone_7'...\n"
+        },
+        {
+          "success": true,
+          "elapsed": 6.85,
+          "exit_code": 0,
+          "timed_out": false,
+          "stderr_tail": "Cloning into '/tmp/git_504_round2_svzkn5kn/clone_8'...\n"
+        },
+        {
+          "success": true,
+          "elapsed": 5.1,
+          "exit_code": 0,
+          "timed_out": false,
+          "stderr_tail": "Cloning into '/tmp/git_504_round2_svzkn5kn/clone_9'...\n"
+        }
+      ]
+    },
+    {
+      "concurrency": 20,
+      "wall_time": 19.3,
+      "success": 20,
+      "failed": 0,
+      "timed_out": 0,
+      "avg_elapsed": 11.87,
+      "max_elapsed": 19.29,
+      "results": [
+        {
+          "success": true,
+          "elapsed": 6.47,
+          "exit_code": 0,
+          "timed_out": false,
+          "stderr_tail": "Cloning into '/tmp/git_504_round3_l9vf7s3j/clone_0'...\n"
+        },
+        {
+          "success": true,
+          "elapsed": 8.21,
+          "exit_code": 0,
+          "timed_out": false,
+          "stderr_tail": "Cloning into '/tmp/git_504_round3_l9vf7s3j/clone_1'...\n"
+        },
+        {
+          "success": true,
+          "elapsed": 14.0,
+          "exit_code": 0,
+          "timed_out": false,
+          "stderr_tail": "Cloning into '/tmp/git_504_round3_l9vf7s3j/clone_2'...\n"
+        },
+        {
+          "success": true,
+          "elapsed": 18.47,
+          "exit_code": 0,
+          "timed_out": false,
+          "stderr_tail": "Cloning into '/tmp/git_504_round3_l9vf7s3j/clone_3'...\n"
+        },
+        {
+          "success": true,
+          "elapsed": 10.48,
+          "exit_code": 0,
+          "timed_out": false,
+          "stderr_tail": "Cloning into '/tmp/git_504_round3_l9vf7s3j/clone_4'...\n"
+        },
+        {
+          "success": true,
+          "elapsed": 15.94,
+          "exit_code": 0,
+          "timed_out": false,
+          "stderr_tail": "Cloning into '/tmp/git_504_round3_l9vf7s3j/clone_5'...\n"
+        },
+        {
+          "success": true,
+          "elapsed": 5.93,
+          "exit_code": 0,
+          "timed_out": false,
+          "stderr_tail": "Cloning into '/tmp/git_504_round3_l9vf7s3j/clone_6'...\n"
+        },
+        {
+          "success": true,
+          "elapsed": 13.38,
+          "exit_code": 0,
+          "timed_out": false,
+          "stderr_tail": "Cloning into '/tmp/git_504_round3_l9vf7s3j/clone_7'...\n"
+        },
+        {
+          "success": true,
+          "elapsed": 10.4,
+          "exit_code": 0,
+          "timed_out": false,
+          "stderr_tail": "Cloning into '/tmp/git_504_round3_l9vf7s3j/clone_8'...\n"
+        },
+        {
+          "success": true,
+          "elapsed": 6.69,
+          "exit_code": 0,
+          "timed_out": false,
+          "stderr_tail": "Cloning into '/tmp/git_504_round3_l9vf7s3j/clone_9'...\n"
+        },
+        {
+          "success": true,
+          "elapsed": 19.29,
+          "exit_code": 0,
+          "timed_out": false,
+          "stderr_tail": "Cloning into '/tmp/git_504_round3_l9vf7s3j/clone_10'...\n"
+        },
+        {
+          "success": true,
+          "elapsed": 12.4,
+          "exit_code": 0,
+          "timed_out": false,
+          "stderr_tail": "% (6958/7100)\rUpdating files:  99% (7029/7100)\rUpdating files: 100% (7100/7100)\rUpdating files: 100% (7100/7100), done.\n"
+        },
+        {
+          "success": true,
+          "elapsed": 10.0,
+          "exit_code": 0,
+          "timed_out": false,
+          "stderr_tail": "Cloning into '/tmp/git_504_round3_l9vf7s3j/clone_12'...\n"
+        },
+        {
+          "success": true,
+          "elapsed": 12.98,
+          "exit_code": 0,
+          "timed_out": false,
+          "stderr_tail": "% (6958/7100)\rUpdating files:  99% (7029/7100)\rUpdating files: 100% (7100/7100)\rUpdating files: 100% (7100/7100), done.\n"
+        },
+        {
+          "success": true,
+          "elapsed": 12.32,
+          "exit_code": 0,
+          "timed_out": false,
+          "stderr_tail": "% (6958/7100)\rUpdating files:  99% (7029/7100)\rUpdating files: 100% (7100/7100)\rUpdating files: 100% (7100/7100), done.\n"
+        },
+        {
+          "success": true,
+          "elapsed": 13.64,
+          "exit_code": 0,
+          "timed_out": false,
+          "stderr_tail": "Cloning into '/tmp/git_504_round3_l9vf7s3j/clone_15'...\n"
+        },
+        {
+          "success": true,
+          "elapsed": 8.34,
+          "exit_code": 0,
+          "timed_out": false,
+          "stderr_tail": "Cloning into '/tmp/git_504_round3_l9vf7s3j/clone_16'...\n"
+        },
+        {
+          "success": true,
+          "elapsed": 12.61,
+          "exit_code": 0,
+          "timed_out": false,
+          "stderr_tail": "% (6958/7100)\rUpdating files:  99% (7029/7100)\rUpdating files: 100% (7100/7100)\rUpdating files: 100% (7100/7100), done.\n"
+        },
+        {
+          "success": true,
+          "elapsed": 10.71,
+          "exit_code": 0,
+          "timed_out": false,
+          "stderr_tail": "Cloning into '/tmp/git_504_round3_l9vf7s3j/clone_18'...\n"
+        },
+        {
+          "success": true,
+          "elapsed": 15.15,
+          "exit_code": 0,
+          "timed_out": false,
+          "stderr_tail": "Cloning into '/tmp/git_504_round3_l9vf7s3j/clone_19'...\n"
+        }
+      ]
+    }
+  ],
+  "via_smart_git_proxy": [
+    {
+      "concurrency": 5,
+      "wall_time": 8.89,
+      "success": 5,
+      "failed": 0,
+      "timed_out": 0,
+      "avg_elapsed": 8.78,
+      "max_elapsed": 8.89,
+      "results": [
+        {
+          "success": true,
+          "elapsed": 8.81,
+          "exit_code": 0,
+          "timed_out": false,
+          "stderr_tail": "Cloning into '/tmp/git_504_round1_u9xpw_p0/clone_0'...\n"
+        },
+        {
+          "success": true,
+          "elapsed": 8.89,
+          "exit_code": 0,
+          "timed_out": false,
+          "stderr_tail": "Cloning into '/tmp/git_504_round1_u9xpw_p0/clone_1'...\n"
+        },
+        {
+          "success": true,
+          "elapsed": 8.68,
+          "exit_code": 0,
+          "timed_out": false,
+          "stderr_tail": "Cloning into '/tmp/git_504_round1_u9xpw_p0/clone_2'...\n"
+        },
+        {
+          "success": true,
+          "elapsed": 8.69,
+          "exit_code": 0,
+          "timed_out": false,
+          "stderr_tail": "Cloning into '/tmp/git_504_round1_u9xpw_p0/clone_3'...\n"
+        },
+        {
+          "success": true,
+          "elapsed": 8.82,
+          "exit_code": 0,
+          "timed_out": false,
+          "stderr_tail": "Cloning into '/tmp/git_504_round1_u9xpw_p0/clone_4'...\n"
+        }
+      ]
+    },
+    {
+      "concurrency": 10,
+      "wall_time": 11.33,
+      "success": 10,
+      "failed": 0,
+      "timed_out": 0,
+      "avg_elapsed": 10.79,
+      "max_elapsed": 11.33,
+      "results": [
+        {
+          "success": true,
+          "elapsed": 11.33,
+          "exit_code": 0,
+          "timed_out": false,
+          "stderr_tail": "Cloning into '/tmp/git_504_round2_f5_75b8r/clone_0'...\n"
+        },
+        {
+          "success": true,
+          "elapsed": 11.21,
+          "exit_code": 0,
+          "timed_out": false,
+          "stderr_tail": "% (6958/7100)\rUpdating files:  99% (7029/7100)\rUpdating files: 100% (7100/7100)\rUpdating files: 100% (7100/7100), done.\n"
+        },
+        {
+          "success": true,
+          "elapsed": 10.96,
+          "exit_code": 0,
+          "timed_out": false,
+          "stderr_tail": "Cloning into '/tmp/git_504_round2_f5_75b8r/clone_2'...\n"
+        },
+        {
+          "success": true,
+          "elapsed": 10.82,
+          "exit_code": 0,
+          "timed_out": false,
+          "stderr_tail": "% (6958/7100)\rUpdating files:  99% (7029/7100)\rUpdating files: 100% (7100/7100)\rUpdating files: 100% (7100/7100), done.\n"
+        },
+        {
+          "success": true,
+          "elapsed": 9.98,
+          "exit_code": 0,
+          "timed_out": false,
+          "stderr_tail": "% (6958/7100)\rUpdating files:  99% (7029/7100)\rUpdating files: 100% (7100/7100)\rUpdating files: 100% (7100/7100), done.\n"
+        },
+        {
+          "success": true,
+          "elapsed": 10.44,
+          "exit_code": 0,
+          "timed_out": false,
+          "stderr_tail": "% (6958/7100)\rUpdating files:  99% (7029/7100)\rUpdating files: 100% (7100/7100)\rUpdating files: 100% (7100/7100), done.\n"
+        },
+        {
+          "success": true,
+          "elapsed": 11.06,
+          "exit_code": 0,
+          "timed_out": false,
+          "stderr_tail": "% (6958/7100)\rUpdating files:  99% (7029/7100)\rUpdating files: 100% (7100/7100)\rUpdating files: 100% (7100/7100), done.\n"
+        },
+        {
+          "success": true,
+          "elapsed": 10.87,
+          "exit_code": 0,
+          "timed_out": false,
+          "stderr_tail": "% (6958/7100)\rUpdating files:  99% (7029/7100)\rUpdating files: 100% (7100/7100)\rUpdating files: 100% (7100/7100), done.\n"
+        },
+        {
+          "success": true,
+          "elapsed": 10.3,
+          "exit_code": 0,
+          "timed_out": false,
+          "stderr_tail": "% (6958/7100)\rUpdating files:  99% (7029/7100)\rUpdating files: 100% (7100/7100)\rUpdating files: 100% (7100/7100), done.\n"
+        },
+        {
+          "success": true,
+          "elapsed": 10.95,
+          "exit_code": 0,
+          "timed_out": false,
+          "stderr_tail": "% (6958/7100)\rUpdating files:  99% (7029/7100)\rUpdating files: 100% (7100/7100)\rUpdating files: 100% (7100/7100), done.\n"
+        }
+      ]
+    },
+    {
+      "concurrency": 20,
+      "wall_time": 24.78,
+      "success": 20,
+      "failed": 0,
+      "timed_out": 0,
+      "avg_elapsed": 23.96,
+      "max_elapsed": 24.75,
+      "results": [
+        {
+          "success": true,
+          "elapsed": 24.68,
+          "exit_code": 0,
+          "timed_out": false,
+          "stderr_tail": "% (6958/7100)\rUpdating files:  99% (7029/7100)\rUpdating files: 100% (7100/7100)\rUpdating files: 100% (7100/7100), done.\n"
+        },
+        {
+          "success": true,
+          "elapsed": 23.58,
+          "exit_code": 0,
+          "timed_out": false,
+          "stderr_tail": "% (6958/7100)\rUpdating files:  99% (7029/7100)\rUpdating files: 100% (7100/7100)\rUpdating files: 100% (7100/7100), done.\n"
+        },
+        {
+          "success": true,
+          "elapsed": 23.44,
+          "exit_code": 0,
+          "timed_out": false,
+          "stderr_tail": "% (6958/7100)\rUpdating files:  99% (7029/7100)\rUpdating files: 100% (7100/7100)\rUpdating files: 100% (7100/7100), done.\n"
+        },
+        {
+          "success": true,
+          "elapsed": 24.66,
+          "exit_code": 0,
+          "timed_out": false,
+          "stderr_tail": "% (6958/7100)\rUpdating files:  99% (7029/7100)\rUpdating files: 100% (7100/7100)\rUpdating files: 100% (7100/7100), done.\n"
+        },
+        {
+          "success": true,
+          "elapsed": 22.82,
+          "exit_code": 0,
+          "timed_out": false,
+          "stderr_tail": "% (6958/7100)\rUpdating files:  99% (7029/7100)\rUpdating files: 100% (7100/7100)\rUpdating files: 100% (7100/7100), done.\n"
+        },
+        {
+          "success": true,
+          "elapsed": 24.46,
+          "exit_code": 0,
+          "timed_out": false,
+          "stderr_tail": "% (6958/7100)\rUpdating files:  99% (7029/7100)\rUpdating files: 100% (7100/7100)\rUpdating files: 100% (7100/7100), done.\n"
+        },
+        {
+          "success": true,
+          "elapsed": 22.83,
+          "exit_code": 0,
+          "timed_out": false,
+          "stderr_tail": "% (6958/7100)\rUpdating files:  99% (7029/7100)\rUpdating files: 100% (7100/7100)\rUpdating files: 100% (7100/7100), done.\n"
+        },
+        {
+          "success": true,
+          "elapsed": 23.3,
+          "exit_code": 0,
+          "timed_out": false,
+          "stderr_tail": "% (6958/7100)\rUpdating files:  99% (7029/7100)\rUpdating files: 100% (7100/7100)\rUpdating files: 100% (7100/7100), done.\n"
+        },
+        {
+          "success": true,
+          "elapsed": 23.44,
+          "exit_code": 0,
+          "timed_out": false,
+          "stderr_tail": "% (6958/7100)\rUpdating files:  99% (7029/7100)\rUpdating files: 100% (7100/7100)\rUpdating files: 100% (7100/7100), done.\n"
+        },
+        {
+          "success": true,
+          "elapsed": 24.75,
+          "exit_code": 0,
+          "timed_out": false,
+          "stderr_tail": "% (6958/7100)\rUpdating files:  99% (7029/7100)\rUpdating files: 100% (7100/7100)\rUpdating files: 100% (7100/7100), done.\n"
+        },
+        {
+          "success": true,
+          "elapsed": 24.5,
+          "exit_code": 0,
+          "timed_out": false,
+          "stderr_tail": "% (6958/7100)\rUpdating files:  99% (7029/7100)\rUpdating files: 100% (7100/7100)\rUpdating files: 100% (7100/7100), done.\n"
+        },
+        {
+          "success": true,
+          "elapsed": 23.15,
+          "exit_code": 0,
+          "timed_out": false,
+          "stderr_tail": "% (6958/7100)\rUpdating files:  99% (7029/7100)\rUpdating files: 100% (7100/7100)\rUpdating files: 100% (7100/7100), done.\n"
+        },
+        {
+          "success": true,
+          "elapsed": 24.0,
+          "exit_code": 0,
+          "timed_out": false,
+          "stderr_tail": "% (6958/7100)\rUpdating files:  99% (7029/7100)\rUpdating files: 100% (7100/7100)\rUpdating files: 100% (7100/7100), done.\n"
+        },
+        {
+          "success": true,
+          "elapsed": 24.38,
+          "exit_code": 0,
+          "timed_out": false,
+          "stderr_tail": "% (6958/7100)\rUpdating files:  99% (7029/7100)\rUpdating files: 100% (7100/7100)\rUpdating files: 100% (7100/7100), done.\n"
+        },
+        {
+          "success": true,
+          "elapsed": 24.56,
+          "exit_code": 0,
+          "timed_out": false,
+          "stderr_tail": "% (6958/7100)\rUpdating files:  99% (7029/7100)\rUpdating files: 100% (7100/7100)\rUpdating files: 100% (7100/7100), done.\n"
+        },
+        {
+          "success": true,
+          "elapsed": 24.67,
+          "exit_code": 0,
+          "timed_out": false,
+          "stderr_tail": "% (6958/7100)\rUpdating files:  99% (7029/7100)\rUpdating files: 100% (7100/7100)\rUpdating files: 100% (7100/7100), done.\n"
+        },
+        {
+          "success": true,
+          "elapsed": 24.75,
+          "exit_code": 0,
+          "timed_out": false,
+          "stderr_tail": "% (6958/7100)\rUpdating files:  99% (7029/7100)\rUpdating files: 100% (7100/7100)\rUpdating files: 100% (7100/7100), done.\n"
+        },
+        {
+          "success": true,
+          "elapsed": 22.64,
+          "exit_code": 0,
+          "timed_out": false,
+          "stderr_tail": "% (7029/7100)\rUpdating files:  99% (7071/7100)\rUpdating files: 100% (7100/7100)\rUpdating files: 100% (7100/7100), done.\n"
+        },
+        {
+          "success": true,
+          "elapsed": 24.36,
+          "exit_code": 0,
+          "timed_out": false,
+          "stderr_tail": "% (6958/7100)\rUpdating files:  99% (7029/7100)\rUpdating files: 100% (7100/7100)\rUpdating files: 100% (7100/7100), done.\n"
+        },
+        {
+          "success": true,
+          "elapsed": 24.31,
+          "exit_code": 0,
+          "timed_out": false,
+          "stderr_tail": "% (6958/7100)\rUpdating files:  99% (7029/7100)\rUpdating files: 100% (7100/7100)\rUpdating files: 100% (7100/7100), done.\n"
+        }
+      ]
+    }
+  ]
+}
