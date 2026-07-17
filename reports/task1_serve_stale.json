@@ -1,0 +1,60 @@
+{
+  "meta": {
+    "timestamp": "2026-07-17 10:17:27",
+    "proxy": "http://localhost:18080",
+    "github_ips_blocked": [
+      "20.205.243.166"
+    ],
+    "note": "只阻断 tcp/443，不阻断其他，避免影响 dns/ssh 等"
+  },
+  "phases": {
+    "A_baseline": {
+      "success": true,
+      "elapsed": 0.86,
+      "returncode": 0,
+      "stderr_tail": "Cloning into '/tmp/task1_A'...",
+      "serve_stale_delay_ms": null,
+      "log_slice_tail": "{\"time\":\"2026-07-17T10:17:28.489806963+08:00\",\"level\":\"INFO\",\"msg\":\"request\",\"repo\":\"github.com/pre-commit/pre-commit-hooks\",\"status\":\"mirror-sync\"}\n{\"time\":\"2026-07-17T10:17:28.51453132+08:00\",\"level\":\"INFO\",\"msg\":\"repo optimization complete\",\"path\":\"/tmp/git-mirrors/github.com/pre-commit/pre-commit-hooks.git\",\"full\":false,\"total_duration_ms\":24}\n"
+    },
+    "B1_reject_warm_60s": {
+      "success": true,
+      "elapsed": 0.06,
+      "returncode": 0,
+      "stderr_tail": "Cloning into '/tmp/task1_B1'...",
+      "serve_stale_delay_ms": 14,
+      "log_slice_tail": "{\"time\":\"2026-07-17T10:18:03.58606136+08:00\",\"level\":\"WARN\",\"msg\":\"sync failed, serving stale\",\"repo\":\"github.com/pre-commit/pre-commit-hooks\",\"err\":\"git fetch failed: exit status 1\\noutput: Fetching origin\\nfatal: unable to access 'https://github.com/pre-commit/pre-commit-hooks.git/': Failed to connect to github.com port 443 after 3 ms: Connection refused\\nerror: Could not fetch origin\\n\",\"duration_ms\":14}\n{\"time\":\"2026-07-17T10:18:03.586086718+08:00\",\"level\":\"INFO\",\"msg\":\"request\",\"repo\":\"github.com/pre-commit/pre-commit-hooks\",\"status\":\"mirror-hit\"}\n"
+    },
+    "B2_drop_warm_240s": {
+      "success": true,
+      "elapsed": 130.15,
+      "returncode": 0,
+      "stderr_tail": "Cloning into '/tmp/task1_B2'...",
+      "serve_stale_delay_ms": 130106,
+      "log_slice_tail": "{\"time\":\"2026-07-17T10:20:48.795225126+08:00\",\"level\":\"WARN\",\"msg\":\"sync failed, serving stale\",\"repo\":\"github.com/pre-commit/pre-commit-hooks\",\"err\":\"git fetch failed: exit status 1\\noutput: Fetching origin\\nfatal: unable to access 'https://github.com/pre-commit/pre-commit-hooks.git/': Failed to connect to github.com port 443 after 130095 ms: Connection timed out\\nerror: Could not fetch origin\\n\",\"duration_ms\":130106}\n{\"time\":\"2026-07-17T10:20:48.795258317+08:00\",\"level\":\"INFO\",\"msg\":\"request\",\"repo\":\"github.com/pre-commit/pre-commit-hooks\",\"status\":\"mirror-hit\"}\n"
+    },
+    "C_reject_fresh": {
+      "success": true,
+      "elapsed": 0.05,
+      "returncode": 0,
+      "stderr_tail": "Cloning into '/tmp/task1_C'...",
+      "serve_stale_delay_ms": 26,
+      "log_slice_tail": "{\"time\":\"2026-07-17T10:20:48.896550848+08:00\",\"level\":\"WARN\",\"msg\":\"sync failed, serving stale\",\"repo\":\"github.com/pre-commit/action\",\"err\":\"git fetch failed: exit status 1\\noutput: Fetching origin\\nfatal: unable to access 'https://github.com/pre-commit/action.git/': Failed to connect to github.com port 443 after 15 ms: Connection refused\\nerror: Could not fetch origin\\n\",\"duration_ms\":26}\n{\"time\":\"2026-07-17T10:20:48.896593631+08:00\",\"level\":\"INFO\",\"msg\":\"request\",\"repo\":\"github.com/pre-commit/action\",\"status\":\"mirror-hit\"}\n"
+    },
+    "D_reject_fresh_repo_cleared_mirror": {
+      "note": "action.git mirror 手动清空后再测",
+      "success": false,
+      "elapsed": 0.027,
+      "returncode": 128,
+      "stderr_tail": "http://localhost:18080/github.com/pre-commit/action.git/: The requested URL returned error: 502",
+      "http_status_from_proxy": 502,
+      "serve_stale_delay_ms": null,
+      "proxy_log_line": "ERROR request failed | git clone failed: exit status 128 | Connection refused"
+    }
+  },
+  "verdict": {
+    "serve_stale_fast_when_upstream_rejects": true,
+    "serve_stale_slow_when_upstream_drops": true,
+    "first_clone_fails_without_stale": true,
+    "_correction_note": "Phase C 结果在 rerun 里因 action.git mirror 已被前轮意外预热而假通过；Phase D 用清空 mirror 后的复测证实：无 mirror 时 proxy 返 HTTP 502。"
+  }
+}

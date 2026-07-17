@@ -1,0 +1,22 @@
+[Unit]
+Description=smart-git-proxy warmup (refresh hot repos)
+After=smart-git-proxy.service network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+User=gitproxy
+Group=gitproxy
+Environment=SGP_URL=http://localhost:8080
+Environment=SGP_REPOS=/etc/smart-git-proxy/warmup-repos.txt
+Environment=MAX_ATTEMPTS=3
+Environment=REQ_TIMEOUT=60
+ExecStart=/usr/local/bin/sgp-warmup
+StandardOutput=append:/var/log/sgp-warmup.log
+StandardError=append:/var/log/sgp-warmup.log
+
+# 安全护栏
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ReadWritePaths=/var/log

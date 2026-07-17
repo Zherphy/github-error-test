@@ -1,0 +1,64 @@
+{
+  "meta": {
+    "scenario": "First-clone of a new repo with upstream REJECTed for 5s, then released",
+    "config": {
+      "patched_default": "UPSTREAM_RETRY_COUNT=3 UPSTREAM_RETRY_BACKOFF=1s",
+      "patched_aggressive": "UPSTREAM_RETRY_COUNT=5 UPSTREAM_RETRY_BACKOFF=500ms"
+    }
+  },
+  "cases": {
+    "orig_v0.2.6": {
+      "rc": 128,
+      "elapsed_s": 0.03
+    },
+    "patched_default": {
+      "rc": 0,
+      "elapsed_s": 9.36,
+      "attempts": [
+        {
+          "attempt": 1,
+          "backoff_ms": 1000
+        },
+        {
+          "attempt": 2,
+          "backoff_ms": 2000
+        },
+        {
+          "attempt": 3,
+          "backoff_ms": 4000
+        }
+      ],
+      "success_on_attempt": 4,
+      "last_attempt_duration_ms": 2200
+    },
+    "patched_aggressive": {
+      "rc": 0,
+      "elapsed_s": 9.86,
+      "attempts": [
+        {
+          "attempt": 1,
+          "backoff_ms": 500
+        },
+        {
+          "attempt": 2,
+          "backoff_ms": 1000
+        },
+        {
+          "attempt": 3,
+          "backoff_ms": 2000
+        },
+        {
+          "attempt": 4,
+          "backoff_ms": 4000
+        }
+      ],
+      "success_on_attempt": 5,
+      "last_attempt_duration_ms": 2183
+    }
+  },
+  "verdict": {
+    "orig_fails_immediately": true,
+    "patched_default_succeeds": true,
+    "patched_aggressive_succeeds": true
+  }
+}

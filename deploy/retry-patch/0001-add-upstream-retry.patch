@@ -1,0 +1,54 @@
+diff --git a/internal/mirror/mirror.go b/internal/mirror/mirror.go
+index d56da08..4b3ccde 100644
+--- a/internal/mirror/mirror.go
++++ b/internal/mirror/mirror.go
+@@ -32,6 +32,7 @@ type Mirror struct {
+ 	cache             *Cache
+ 	packThreads       int
+ 	maintainAfterSync bool
++	retry             UpstreamRetryPolicy
+ 
+ 	group      singleflight.Group
+ 	maintGroup singleflight.Group
+@@ -45,6 +46,11 @@ func New(root string, staleAfter time.Duration, maxSize config.SizeSpec, packThr
+ 	if err := os.MkdirAll(root, 0o755); err != nil {
+ 		return nil, fmt.Errorf("create mirror root: %w", err)
+ 	}
++	policy := LoadPolicyFromEnv()
++	log.Info("upstream retry policy",
++		"max_retries", policy.MaxRetries,
++		"initial_backoff_ms", policy.InitialBackoff.Milliseconds(),
++		"attempt_timeout_ms", policy.AttemptTimeout.Milliseconds())
+ 	return &Mirror{
+ 		root:              root,
+ 		staleAfter:        staleAfter,
+@@ -52,6 +58,7 @@ func New(root string, staleAfter time.Duration, maxSize config.SizeSpec, packThr
+ 		cache:             NewCache(root, maxSize, log),
+ 		packThreads:       packThreads,
+ 		maintainAfterSync: maintainAfterSync,
++		retry:             policy,
+ 	}, nil
+ }
+ 
+@@ -79,7 +86,9 @@ func (m *Mirror) EnsureRepo(ctx context.Context, host, owner, repo, upstreamURL,
+ 	result, err, shared := m.group.Do("clone:"+key, func() (interface{}, error) {
+ 		// Check inside singleflight to avoid TOCTOU race
+ 		if _, err := os.Stat(repoPath); os.IsNotExist(err) {
+-			if err := m.cloneRepo(ctx, repoPath, upstreamURL, authHeader); err != nil {
++			if err := m.runWithRetry(ctx, "clone", key, func(actx context.Context) error {
++				return m.cloneRepo(actx, repoPath, upstreamURL, authHeader)
++			}); err != nil {
+ 				return StatusClone, err
+ 			}
+ 			m.lastSync.Store(key, time.Now())
+@@ -113,7 +122,9 @@ func (m *Mirror) EnsureRepo(ctx context.Context, host, owner, repo, upstreamURL,
+ 		syncStart := time.Now()
+ 		// Sync using singleflight (concurrent requests share same fetch)
+ 		_, err, shared := m.group.Do("sync:"+key, func() (interface{}, error) {
+-			return nil, m.syncRepo(ctx, repoPath, upstreamURL, authHeader)
++			return nil, m.runWithRetry(ctx, "sync", key, func(actx context.Context) error {
++				return m.syncRepo(actx, repoPath, upstreamURL, authHeader)
++			})
+ 		})
+ 		if shared {
+ 			m.log.Debug("waited for in-flight sync", "repo", key, "wait_duration_ms", time.Since(syncStart).Milliseconds())

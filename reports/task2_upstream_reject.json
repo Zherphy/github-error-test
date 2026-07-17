@@ -1,0 +1,168 @@
+{
+  "2s": {
+    "success": 15,
+    "total": 15,
+    "avg": 0.055,
+    "max": 0.062,
+    "runs": [
+      {
+        "success": true,
+        "elapsed": 0.054,
+        "stderr": "Cloning into '/tmp/task2c_stale2s_0'..."
+      },
+      {
+        "success": true,
+        "elapsed": 0.054,
+        "stderr": "Cloning into '/tmp/task2c_stale2s_1'..."
+      },
+      {
+        "success": true,
+        "elapsed": 0.051,
+        "stderr": "Cloning into '/tmp/task2c_stale2s_2'..."
+      },
+      {
+        "success": true,
+        "elapsed": 0.05,
+        "stderr": "Cloning into '/tmp/task2c_stale2s_3'..."
+      },
+      {
+        "success": true,
+        "elapsed": 0.05,
+        "stderr": "Cloning into '/tmp/task2c_stale2s_4'..."
+      },
+      {
+        "success": true,
+        "elapsed": 0.053,
+        "stderr": "Cloning into '/tmp/task2c_stale2s_5'..."
+      },
+      {
+        "success": true,
+        "elapsed": 0.055,
+        "stderr": "Cloning into '/tmp/task2c_stale2s_6'..."
+      },
+      {
+        "success": true,
+        "elapsed": 0.055,
+        "stderr": "Cloning into '/tmp/task2c_stale2s_7'..."
+      },
+      {
+        "success": true,
+        "elapsed": 0.062,
+        "stderr": "Cloning into '/tmp/task2c_stale2s_8'..."
+      },
+      {
+        "success": true,
+        "elapsed": 0.057,
+        "stderr": "Cloning into '/tmp/task2c_stale2s_9'..."
+      },
+      {
+        "success": true,
+        "elapsed": 0.055,
+        "stderr": "Cloning into '/tmp/task2c_stale2s_10'..."
+      },
+      {
+        "success": true,
+        "elapsed": 0.056,
+        "stderr": "Cloning into '/tmp/task2c_stale2s_11'..."
+      },
+      {
+        "success": true,
+        "elapsed": 0.053,
+        "stderr": "Cloning into '/tmp/task2c_stale2s_12'..."
+      },
+      {
+        "success": true,
+        "elapsed": 0.058,
+        "stderr": "Cloning into '/tmp/task2c_stale2s_13'..."
+      },
+      {
+        "success": true,
+        "elapsed": 0.056,
+        "stderr": "Cloning into '/tmp/task2c_stale2s_14'..."
+      }
+    ]
+  },
+  "600s": {
+    "success": 15,
+    "total": 15,
+    "avg": 0.043,
+    "max": 0.046,
+    "runs": [
+      {
+        "success": true,
+        "elapsed": 0.043,
+        "stderr": "Cloning into '/tmp/task2c_stale600s_0'..."
+      },
+      {
+        "success": true,
+        "elapsed": 0.039,
+        "stderr": "Cloning into '/tmp/task2c_stale600s_1'..."
+      },
+      {
+        "success": true,
+        "elapsed": 0.041,
+        "stderr": "Cloning into '/tmp/task2c_stale600s_2'..."
+      },
+      {
+        "success": true,
+        "elapsed": 0.043,
+        "stderr": "Cloning into '/tmp/task2c_stale600s_3'..."
+      },
+      {
+        "success": true,
+        "elapsed": 0.042,
+        "stderr": "Cloning into '/tmp/task2c_stale600s_4'..."
+      },
+      {
+        "success": true,
+        "elapsed": 0.042,
+        "stderr": "Cloning into '/tmp/task2c_stale600s_5'..."
+      },
+      {
+        "success": true,
+        "elapsed": 0.042,
+        "stderr": "Cloning into '/tmp/task2c_stale600s_6'..."
+      },
+      {
+        "success": true,
+        "elapsed": 0.044,
+        "stderr": "Cloning into '/tmp/task2c_stale600s_7'..."
+      },
+      {
+        "success": true,
+        "elapsed": 0.044,
+        "stderr": "Cloning into '/tmp/task2c_stale600s_8'..."
+      },
+      {
+        "success": true,
+        "elapsed": 0.043,
+        "stderr": "Cloning into '/tmp/task2c_stale600s_9'..."
+      },
+      {
+        "success": true,
+        "elapsed": 0.043,
+        "stderr": "Cloning into '/tmp/task2c_stale600s_10'..."
+      },
+      {
+        "success": true,
+        "elapsed": 0.045,
+        "stderr": "Cloning into '/tmp/task2c_stale600s_11'..."
+      },
+      {
+        "success": true,
+        "elapsed": 0.045,
+        "stderr": "Cloning into '/tmp/task2c_stale600s_12'..."
+      },
+      {
+        "success": true,
+        "elapsed": 0.04,
+        "stderr": "Cloning into '/tmp/task2c_stale600s_13'..."
+      },
+      {
+        "success": true,
+        "elapsed": 0.046,
+        "stderr": "Cloning into '/tmp/task2c_stale600s_14'..."
+      }
+    ]
+  }
+}

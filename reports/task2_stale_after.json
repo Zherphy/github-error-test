@@ -1,0 +1,232 @@
+{
+  "meta": {
+    "timestamp": "2026-07-17 10:26:18",
+    "iface": "ens3",
+    "target_repo": "https://github.com/pre-commit/pre-commit-hooks.git",
+    "params": {
+      "iterations": 15,
+      "interval": 1.0,
+      "clone_timeout": 30.0,
+      "loss": "10%",
+      "delay": "500ms"
+    }
+  },
+  "scenarios": [
+    {
+      "name": "A_stale_2s",
+      "config": {
+        "stale_after": "2s",
+        "iterations": 15,
+        "interval": 1.0,
+        "clone_timeout": 30.0,
+        "netem_loss": "10%",
+        "netem_delay": "500ms"
+      },
+      "success": 15,
+      "failed": 0,
+      "http_5xx": 0,
+      "avg_elapsed": 2.61,
+      "max_elapsed": 6.62,
+      "iterations": [
+        {
+          "success": true,
+          "elapsed": 0.04,
+          "http_5xx": false,
+          "stderr_tail": "Cloning into '/tmp/task2_iter0'..."
+        },
+        {
+          "success": true,
+          "elapsed": 0.04,
+          "http_5xx": false,
+          "stderr_tail": "Cloning into '/tmp/task2_iter1'..."
+        },
+        {
+          "success": true,
+          "elapsed": 5.3,
+          "http_5xx": false,
+          "stderr_tail": "Cloning into '/tmp/task2_iter2'..."
+        },
+        {
+          "success": true,
+          "elapsed": 0.04,
+          "http_5xx": false,
+          "stderr_tail": "Cloning into '/tmp/task2_iter3'..."
+        },
+        {
+          "success": true,
+          "elapsed": 5.27,
+          "http_5xx": false,
+          "stderr_tail": "Cloning into '/tmp/task2_iter4'..."
+        },
+        {
+          "success": true,
+          "elapsed": 0.04,
+          "http_5xx": false,
+          "stderr_tail": "Cloning into '/tmp/task2_iter5'..."
+        },
+        {
+          "success": true,
+          "elapsed": 6.62,
+          "http_5xx": false,
+          "stderr_tail": "Cloning into '/tmp/task2_iter6'..."
+        },
+        {
+          "success": true,
+          "elapsed": 0.04,
+          "http_5xx": false,
+          "stderr_tail": "Cloning into '/tmp/task2_iter7'..."
+        },
+        {
+          "success": true,
+          "elapsed": 4.91,
+          "http_5xx": false,
+          "stderr_tail": "Cloning into '/tmp/task2_iter8'..."
+        },
+        {
+          "success": true,
+          "elapsed": 0.14,
+          "http_5xx": false,
+          "stderr_tail": "Cloning into '/tmp/task2_iter9'..."
+        },
+        {
+          "success": true,
+          "elapsed": 5.93,
+          "http_5xx": false,
+          "stderr_tail": "Cloning into '/tmp/task2_iter10'..."
+        },
+        {
+          "success": true,
+          "elapsed": 0.04,
+          "http_5xx": false,
+          "stderr_tail": "Cloning into '/tmp/task2_iter11'..."
+        },
+        {
+          "success": true,
+          "elapsed": 5.93,
+          "http_5xx": false,
+          "stderr_tail": "Cloning into '/tmp/task2_iter12'..."
+        },
+        {
+          "success": true,
+          "elapsed": 0.05,
+          "http_5xx": false,
+          "stderr_tail": "Cloning into '/tmp/task2_iter13'..."
+        },
+        {
+          "success": true,
+          "elapsed": 4.74,
+          "http_5xx": false,
+          "stderr_tail": "Cloning into '/tmp/task2_iter14'..."
+        }
+      ]
+    },
+    {
+      "name": "B_stale_600s",
+      "config": {
+        "stale_after": "600s",
+        "iterations": 15,
+        "interval": 1.0,
+        "clone_timeout": 30.0,
+        "netem_loss": "10%",
+        "netem_delay": "500ms"
+      },
+      "success": 15,
+      "failed": 0,
+      "http_5xx": 0,
+      "avg_elapsed": 0.05,
+      "max_elapsed": 0.09,
+      "iterations": [
+        {
+          "success": true,
+          "elapsed": 0.04,
+          "http_5xx": false,
+          "stderr_tail": "Cloning into '/tmp/task2_iter0'..."
+        },
+        {
+          "success": true,
+          "elapsed": 0.04,
+          "http_5xx": false,
+          "stderr_tail": "Cloning into '/tmp/task2_iter1'..."
+        },
+        {
+          "success": true,
+          "elapsed": 0.04,
+          "http_5xx": false,
+          "stderr_tail": "Cloning into '/tmp/task2_iter2'..."
+        },
+        {
+          "success": true,
+          "elapsed": 0.05,
+          "http_5xx": false,
+          "stderr_tail": "Cloning into '/tmp/task2_iter3'..."
+        },
+        {
+          "success": true,
+          "elapsed": 0.06,
+          "http_5xx": false,
+          "stderr_tail": "Cloning into '/tmp/task2_iter4'..."
+        },
+        {
+          "success": true,
+          "elapsed": 0.04,
+          "http_5xx": false,
+          "stderr_tail": "Cloning into '/tmp/task2_iter5'..."
+        },
+        {
+          "success": true,
+          "elapsed": 0.04,
+          "http_5xx": false,
+          "stderr_tail": "Cloning into '/tmp/task2_iter6'..."
+        },
+        {
+          "success": true,
+          "elapsed": 0.05,
+          "http_5xx": false,
+          "stderr_tail": "Cloning into '/tmp/task2_iter7'..."
+        },
+        {
+          "success": true,
+          "elapsed": 0.04,
+          "http_5xx": false,
+          "stderr_tail": "Cloning into '/tmp/task2_iter8'..."
+        },
+        {
+          "success": true,
+          "elapsed": 0.04,
+          "http_5xx": false,
+          "stderr_tail": "Cloning into '/tmp/task2_iter9'..."
+        },
+        {
+          "success": true,
+          "elapsed": 0.04,
+          "http_5xx": false,
+          "stderr_tail": "Cloning into '/tmp/task2_iter10'..."
+        },
+        {
+          "success": true,
+          "elapsed": 0.05,
+          "http_5xx": false,
+          "stderr_tail": "Cloning into '/tmp/task2_iter11'..."
+        },
+        {
+          "success": true,
+          "elapsed": 0.07,
+          "http_5xx": false,
+          "stderr_tail": "Cloning into '/tmp/task2_iter12'..."
+        },
+        {
+          "success": true,
+          "elapsed": 0.09,
+          "http_5xx": false,
+          "stderr_tail": "Cloning into '/tmp/task2_iter13'..."
+        },
+        {
+          "success": true,
+          "elapsed": 0.05,
+          "http_5xx": false,
+          "stderr_tail": "Cloning into '/tmp/task2_iter14'..."
+        }
+      ]
+    }
+  ]
+}

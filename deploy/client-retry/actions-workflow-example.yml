@@ -1,0 +1,65 @@
+# .github/workflows/example-with-retry.yml
+# 展示如何在 self-hosted runner 上让 checkout / 依赖 clone 走 smart-git-proxy + 自动重试
+#
+# 前提：runner 与 smart-git-proxy 网络可达（proxy 通常在同 VPC 或同集群）
+# 环境变量：
+#   SGP_URL —— smart-git-proxy 的地址（例如 http://smart-git-proxy.internal:8080）
+
+name: build (retry-hardened)
+
+on:
+  push:
+  pull_request:
+
+env:
+  SGP_URL: ${{ vars.SGP_URL }}
+
+jobs:
+  build:
+    runs-on: self-hosted   # 关键：必须 self-hosted，GitHub-hosted runner 无法访问内网 proxy
+    steps:
+      # 1. 全局设置 git URL 改写，让所有后续 git 操作走 proxy
+      - name: Configure git to use smart-git-proxy
+        run: |
+          git config --global "url.${SGP_URL}/github.com/.insteadOf" "https://github.com/"
+          # 私有仓库场景：透传 token
+          AUTH=$(echo -n "x-access-token:${{ secrets.GITHUB_TOKEN }}" | base64 -w0)
+          git config --global "http.${SGP_URL}/.extraheader" "AUTHORIZATION: basic $AUTH"
+
+      # 2. checkout：actions/checkout 底层就是 git，会走上面的 insteadOf。
+      #    但 actions/checkout 自己没有重试；用 nick-fields/retry 包一层
+      - name: Checkout with retry
+        uses: nick-fields/retry@v3
+        with:
+          timeout_minutes: 5
+          max_attempts: 3
+          retry_wait_seconds: 10
+          # 用手工 git clone 替代 actions/checkout，因为后者不能被 retry action 完整包住
+          command: |
+            rm -rf src
+            git clone --depth 1 --branch ${{ github.ref_name }} \
+              "https://github.com/${{ github.repository }}" src
+
+      # 3. 依赖仓库 clone（例如 monorepo 依赖、submodule 等）也用 retry 包
+      - name: Fetch dependencies with retry
+        uses: nick-fields/retry@v3
+        with:
+          timeout_minutes: 10
+          max_attempts: 4
+          retry_wait_seconds: 5
+          retry_wait_seconds_max: 30
+          command: |
+            # 举例：更新 submodule
+            cd src && git submodule update --init --recursive --depth 1
+
+      # 4. 或者用我们的 git-clone-retry shim（无需引入 external action，纯 shell）
+      - name: Alt clone (shell shim)
+        run: |
+          # 假设 shim 已经预置在 runner 镜像 /usr/local/bin/git-clone-retry
+          GCR_MAX_ATTEMPTS=4 GCR_BACKOFF_BASE=2 git-clone-retry \
+            --depth 1 https://github.com/some-org/some-repo /tmp/dep
+
+      - name: Build
+        working-directory: src
+        run: |
+          make build

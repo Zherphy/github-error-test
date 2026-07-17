@@ -1,0 +1,16 @@
+[Unit]
+Description=Run sgp-warmup every 5 minutes
+Requires=sgp-warmup.service
+
+[Timer]
+# 启动后 30s 触发首次
+OnBootSec=30s
+# 之后每 5 分钟
+OnUnitActiveSec=5min
+# 系统时钟大跳变时保守跑一次
+Persistent=true
+# 若上次未完成则跳过（避免堆积）
+AccuracySec=10s
+
+[Install]
+WantedBy=timers.target

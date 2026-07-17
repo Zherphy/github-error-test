@@ -1,0 +1,23 @@
+# /etc/smart-git-proxy/warmup-repos.txt
+# 每行一个 owner/repo，# 开头为注释
+#
+# 建议按"高频 clone 且体积可控"筛选。太大的仓库（>1GB）冷启动本身耗时长，
+# 每 5 分钟 warmup 都会占资源，需要单独考虑。
+
+# --- pre-commit 常用 hooks（几 MB，warmup 秒级完成） ---
+pre-commit/pre-commit-hooks
+pre-commit/pre-commit
+psf/black
+PyCQA/ruff
+PyCQA/isort
+PyCQA/flake8
+pycqa/bandit
+
+# --- 你们内部的 monorepo / 依赖仓库 ---
+# your-org/main-service
+# your-org/shared-libs
+
+# --- 常用的公开 action 仓库（如果你们 fork 过就换成 fork 后的 ---
+actions/checkout
+actions/setup-python
+actions/setup-node
