@@ -1,0 +1,58 @@
+{
+  "meta": {
+    "timestamp": "2026-07-17 17:21:03",
+    "gitcdn_url": "http://localhost:18000",
+    "small_repo": "pre-commit/pre-commit-hooks",
+    "large_repo": "sgl-project/sglang",
+    "note": "R2 (perf) + R3 (c=20,50,100 concurrent) + R4 (netem) merged from sequential runs"
+  },
+  "r2_perf": null,
+  "r3_concurrent": [
+    {
+      "concurrency": 20,
+      "success": 20,
+      "failed": 0,
+      "avg_elapsed": 19.64,
+      "max_elapsed": 28.42,
+      "wall_time": 28.61,
+      "min_mem_avail_mb": 8093.0,
+      "aborted": false
+    },
+    {
+      "concurrency": 50,
+      "success": 50,
+      "failed": 0,
+      "avg_elapsed": 38.96,
+      "max_elapsed": 72.29,
+      "wall_time": 72.52,
+      "min_mem_avail_mb": 7996.0,
+      "aborted": false
+    },
+    {
+      "concurrency": 100,
+      "success": 100,
+      "failed": 0,
+      "avg_elapsed": 73.81,
+      "max_elapsed": 136.3,
+      "wall_time": 136.61,
+      "min_mem_avail_mb": 7727.0,
+      "aborted": false
+    }
+  ],
+  "r4_netem": {
+    "no_netem": {
+      "iterations": 15,
+      "success": 15,
+      "failed": 0,
+      "avg_elapsed": 0.87,
+      "max_elapsed": 1.0
+    },
+    "with_netem": {
+      "iterations": 15,
+      "success": 15,
+      "failed": 0,
+      "avg_elapsed": 3.37,
+      "max_elapsed": 7.82
+    }
+  }
+}

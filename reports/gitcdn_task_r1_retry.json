@@ -1,0 +1,148 @@
+{
+  "meta": {
+    "timestamp": "2026-07-17 17:07:09",
+    "gitcdn_container": "git-cdn-test",
+    "gitcdn_url": "http://localhost:18000",
+    "github_ip": "20.205.243.166",
+    "retry_env": {
+      "REQUEST_MAX_RETRIES": "container-default",
+      "BACKOFF_START": "container-default",
+      "BACKOFF_COUNT": "container-default"
+    }
+  },
+  "phases": [
+    {
+      "phase": "1_baseline",
+      "repo": "pre-commit/pre-commit-hooks",
+      "config_seq": [
+        [
+          "clear",
+          30.0
+        ]
+      ],
+      "client_timeout": 30.0,
+      "success": true,
+      "elapsed": 2.83,
+      "returncode": 0,
+      "stderr_tail": "Cloning into '/tmp/gitcdn_r1_1_baseline'...",
+      "retry_events": {
+        "http_retry_count": 0,
+        "clone_retry_count": 0,
+        "fetch_retry_count": 0,
+        "connection_errors": 0,
+        "final_response_statuses": [
+          200,
+          200
+        ]
+      },
+      "log_tail_scrubbed": "5a2a170>\n  post_request: <function PostRequest.post_request at 0x7fbd25a2a200>\n  child_exit: <function child_exit at 0x7fbd2434c4c0>\n  worker_exit: <function worker_exit at 0x7fbd24337a30>\n  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x7fbd25a2a560>\n  on_exit: <function OnExit.on_exit at 0x7fbd25a2a680>\n  proxy_protocol: False\n  proxy_allow_ips: ['127.0.0.1']\n  keyfile: None\n  certfile: None\n  ssl_version: 2\n  cert_reqs: 0\n  ca_certs: None\n  suppress_ragged_eofs: True\n  do_handshake_on_connect: False\n  ciphers: None\n  raw_paste_global_conf: []\n  strip_header_spaces: False\n[2026-07-17 08:55:44 +0000] [1] [INFO] Starting gunicorn 20.1.0\n[2026-07-17 08:55:44 +0000] [1] [DEBUG] Arbiter booted\n[2026-07-17 08:55:44 +0000] [1] [INFO] Listening at: http://0.0.0.0:8000 (1)\n[2026-07-17 08:55:44 +0000] [1] [INFO] Using worker: aiohttp.worker.GunicornWebWorker\n[2026-07-17 08:55:44 +0000] [7] [INFO] Booting worker with pid: 7\n[2026-07-17 08:55:44 +0000] [8] [INFO] Booting worker with pid: 8\n[2026-07-17 08:55:44 +0000] [9] [INFO] Booting worker with pid: 9\n[2026-07-17 08:55:44 +0000] [10] [INFO] Booting worker with pid: 10\n[2026-07-17 08:55:44 +0000] [1] [DEBUG] 4 workers\n"
+    },
+    {
+      "phase": "2_full_block_30s",
+      "repo": "psf/black",
+      "config_seq": [
+        [
+          "REJECT",
+          40.0
+        ]
+      ],
+      "client_timeout": 30.0,
+      "success": false,
+      "elapsed": 30.03,
+      "returncode": -1,
+      "stderr_tail": "CLIENT_TIMEOUT_30.0s",
+      "retry_events": {
+        "http_retry_count": 0,
+        "clone_retry_count": 0,
+        "fetch_retry_count": 0,
+        "connection_errors": 9,
+        "final_response_statuses": []
+      },
+      "log_tail_scrubbed": "ib/python3.10/site-packages/git_cdn/client_session.py\", line 32, in __aenter__\n    self.cm_request = await self.session.request(\n  File \"/usr/local/lib/python3.10/site-packages/aiohttp/client.py\", line 536, in _request\n    conn = await self._connector.connect(\n  File \"/usr/local/lib/python3.10/site-packages/aiohttp/connector.py\", line 540, in connect\n    proto = await self._create_connection(req, traces, timeout)\n  File \"/usr/local/lib/python3.10/site-packages/aiohttp/connector.py\", line 901, in _create_connection\n    _, proto = await self._create_direct_connection(req, traces, timeout)\n  File \"/usr/local/lib/python3.10/site-packages/aiohttp/connector.py\", line 1206, in _create_direct_connection\n    raise last_exc\n  File \"/usr/local/lib/python3.10/site-packages/aiohttp/connector.py\", line 1175, in _create_direct_connection\n    transp, proto = await self._wrap_create_connection(\n  File \"/usr/local/lib/python3.10/site-packages/aiohttp/connector.py\", line 988, in _wrap_create_connection\n    raise client_error(req.connection_key, exc) from exc\naiohttp.client_exceptions.ClientConnectorError: Cannot connect to host github.com:443 ssl:default [Connect call failed ('20.205.243.166', 443)]\n"
+    },
+    {
+      "phase": "3_reject_5s_60t",
+      "repo": "astral-sh/ruff",
+      "config_seq": [
+        [
+          "REJECT",
+          5.0
+        ],
+        [
+          "clear",
+          0
+        ]
+      ],
+      "client_timeout": 60.0,
+      "success": true,
+      "elapsed": 40.05,
+      "returncode": 0,
+      "stderr_tail": "Cloning into '/tmp/gitcdn_r1_3_reject_5s_60t'...",
+      "retry_events": {
+        "http_retry_count": 0,
+        "clone_retry_count": 0,
+        "fetch_retry_count": 0,
+        "connection_errors": 9,
+        "final_response_statuses": []
+      },
+      "log_tail_scrubbed": "ib/python3.10/site-packages/git_cdn/client_session.py\", line 32, in __aenter__\n    self.cm_request = await self.session.request(\n  File \"/usr/local/lib/python3.10/site-packages/aiohttp/client.py\", line 536, in _request\n    conn = await self._connector.connect(\n  File \"/usr/local/lib/python3.10/site-packages/aiohttp/connector.py\", line 540, in connect\n    proto = await self._create_connection(req, traces, timeout)\n  File \"/usr/local/lib/python3.10/site-packages/aiohttp/connector.py\", line 901, in _create_connection\n    _, proto = await self._create_direct_connection(req, traces, timeout)\n  File \"/usr/local/lib/python3.10/site-packages/aiohttp/connector.py\", line 1206, in _create_direct_connection\n    raise last_exc\n  File \"/usr/local/lib/python3.10/site-packages/aiohttp/connector.py\", line 1175, in _create_direct_connection\n    transp, proto = await self._wrap_create_connection(\n  File \"/usr/local/lib/python3.10/site-packages/aiohttp/connector.py\", line 988, in _wrap_create_connection\n    raise client_error(req.connection_key, exc) from exc\naiohttp.client_exceptions.ClientConnectorError: Cannot connect to host github.com:443 ssl:default [Connect call failed ('20.205.243.166', 443)]\n"
+    },
+    {
+      "phase": "4_reject_15s_60t",
+      "repo": "PyCQA/isort",
+      "config_seq": [
+        [
+          "REJECT",
+          15.0
+        ],
+        [
+          "clear",
+          0
+        ]
+      ],
+      "client_timeout": 60.0,
+      "success": true,
+      "elapsed": 26.61,
+      "returncode": 0,
+      "stderr_tail": "Cloning into '/tmp/gitcdn_r1_4_reject_15s_60t'...",
+      "retry_events": {
+        "http_retry_count": 0,
+        "clone_retry_count": 0,
+        "fetch_retry_count": 0,
+        "connection_errors": 10,
+        "final_response_statuses": []
+      },
+      "log_tail_scrubbed": "ib/python3.10/site-packages/git_cdn/client_session.py\", line 32, in __aenter__\n    self.cm_request = await self.session.request(\n  File \"/usr/local/lib/python3.10/site-packages/aiohttp/client.py\", line 536, in _request\n    conn = await self._connector.connect(\n  File \"/usr/local/lib/python3.10/site-packages/aiohttp/connector.py\", line 540, in connect\n    proto = await self._create_connection(req, traces, timeout)\n  File \"/usr/local/lib/python3.10/site-packages/aiohttp/connector.py\", line 901, in _create_connection\n    _, proto = await self._create_direct_connection(req, traces, timeout)\n  File \"/usr/local/lib/python3.10/site-packages/aiohttp/connector.py\", line 1206, in _create_direct_connection\n    raise last_exc\n  File \"/usr/local/lib/python3.10/site-packages/aiohttp/connector.py\", line 1175, in _create_direct_connection\n    transp, proto = await self._wrap_create_connection(\n  File \"/usr/local/lib/python3.10/site-packages/aiohttp/connector.py\", line 988, in _wrap_create_connection\n    raise client_error(req.connection_key, exc) from exc\naiohttp.client_exceptions.ClientConnectorError: Cannot connect to host github.com:443 ssl:default [Connect call failed ('20.205.243.166', 443)]\n"
+    },
+    {
+      "phase": "5_drop_45s",
+      "repo": "PyCQA/flake8",
+      "config_seq": [
+        [
+          "DROP",
+          60.0
+        ]
+      ],
+      "client_timeout": 45.0,
+      "success": false,
+      "elapsed": 45.05,
+      "returncode": -1,
+      "stderr_tail": "CLIENT_TIMEOUT_45.0s",
+      "retry_events": {
+        "http_retry_count": 0,
+        "clone_retry_count": 0,
+        "fetch_retry_count": 0,
+        "connection_errors": 1,
+        "final_response_statuses": []
+      },
+      "log_tail_scrubbed": "onnection_key, exc) from exc\naiohttp.client_exceptions.ClientConnectorError: Cannot connect to host github.com:443 ssl:default [Connect call failed ('20.205.243.166', 443)]\n\u001b[2m09:10.02\u001b[0m [\u001b[31m\u001b[1merror    \u001b[0m] \u001b[1mClient connection error       \u001b[0m [\u001b[34m\u001b[1mgit_cdn.client_session\u001b[0m] \u001b[36mrequest_max_retries\u001b[0m=\u001b[35m10\u001b[0m \u001b[36mrequest_method\u001b[0m=\u001b[35mget\u001b[0m \u001b[36mrequest_url\u001b[0m=\u001b[35mhttps://github.com/PyCQA/flake8.git/info/refs\u001b[0m \u001b[36mresp_time\u001b[0m=\u001b[35m27.555444478988647\u001b[0m \u001b[36mretries\u001b[0m=\u001b[35m0\u001b[0m \u001b[36mtimeout\u001b[0m=\u001b[35m0.1\u001b[0m\nTraceback (most recent call last):\n  File \"/usr/local/lib/python3.10/site-packages/git_cdn/client_session.py\", line 32, in __aenter__\n    self.cm_request = await self.session.request(\n  File \"/usr/local/lib/python3.10/site-packages/aiohttp/client.py\", line 560, in _request\n    await resp.start(conn)\n  File \"/usr/local/lib/python3.10/site-packages/aiohttp/client_reqrep.py\", line 899, in start\n    message, payload = await protocol.read()  # type: ignore[union-attr]\n  File \"/usr/local/lib/python3.10/site-packages/aiohttp/streams.py\", line 616, in read\n    await self._waiter\naiohttp.client_exceptions.ServerDisconnectedError: Server disconnected\n"
+    }
+  ],
+  "verdict": {
+    "baseline_ok": true,
+    "reject_5s_absorbed_by_retry": true,
+    "reject_15s_absorbed_by_retry": true,
+    "drop_failure_before_130s": true,
+    "retry_events_observed_during_blocks": true
+  }
+}
