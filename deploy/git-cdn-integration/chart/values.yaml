@@ -1,0 +1,139 @@
+# values.yaml — git-cdn Helm chart
+# ---------------------------------------------------------------------------
+# 对齐 ascend-ci-deployment 仓库中 manifests/smart-git-proxy/chart 的目录/字段风格
+# 只暴露 git-cdn 特有配置，其他保持与 smart-git-proxy 一致，便于集群侧 Application 复用
+# ---------------------------------------------------------------------------
+
+namespace: git-cdn
+
+serviceAccount:
+  enable: true
+  name: git-cdn
+
+image:
+  # 与 smart-git-proxy 使用同一个 pull secret；在 pod-template configmap 里已经存在
+  pullSecret: huawei-swr-image-pull-secret-model-gy
+
+proxy:
+  appName: git-cdn
+  # git-cdn 用 gunicorn + 内部 asyncio worker 池；单副本即可扛 100+ 并发。
+  # 若确需多副本，务必配 RWX PVC（华为云 SFS Turbo），并将 lock 目录、pack_cache 目录都放到共享盘，
+  # 否则不同副本各自维护 mirror 会与 upstream 反复 sync。
+  replicaCount: 1
+
+  image:
+    # bpaquet/git_cdn 官方镜像仅提供 GitLab 上传管道，且 Docker Hub 上的 forestscribe/git-cdn
+    # 是 7 年前 Python 3.7 版本、CA 根链已过期。生产建议 fork 源码自建镜像（Python 3.10-alpine，
+    # 从 v0.2.6 提交 build，参考 deploy/git-cdn-integration/README.md 里的 build 步骤）。
+    # 之后推到 modelfoundry 的 SWR。
+    repository: swr.cn-southwest-2.myhuaweicloud.com/modelfoundry/git-cdn
+    tag: "v1.0.0"
+    pullPolicy: IfNotPresent
+
+  # 监听端口：docker Dockerfile CMD 里已硬编 :8000；k8s Service 会再映射
+  port: 8000
+
+  # git-cdn 只做拉取加速，不代理 push；用途和 smart-git-proxy 完全对齐
+  upstream: "https://github.com/"
+
+  # gunicorn worker 数：每个 worker 是独立 asyncio loop，可扛百级别并发
+  # 若节点 CPU >= 8，推 4；CPU=4 推 2；单副本内多 worker 之间会共享 pack_cache 目录
+  gunicornWorker: 4
+
+  # aiohttp session 的最大总重试次数（HTTP 层），生产建议 5-10
+  # 累计 backoff = 0.1 * (2^0 + 2^1 + ... + 2^n)，n=10 时 ~102s，n=5 时 ~6.3s
+  requestMaxRetries: "10"
+
+  # git 命令级重试（clone / fetch 子进程失败后的重试）
+  backoffStart: "0.5"
+  backoffCount: "5"
+
+  # pack cache 总容量上限（GB），超过按 LRU 淘汰。生产按仓库总量 × 2 估
+  packCacheSizeGb: "20"
+
+  # 与 smart-git-proxy 一样禁止 root 运行
+  # 官方镜像默认 root，实际部署时建议 USER 65534 或加 --user 参数
+  securityContext:
+    runAsNonRoot: false        # 官方镜像装了 root 依赖；改成 nonroot 需要自建镜像时明确 USER
+    runAsUser: 0
+    allowPrivilegeEscalation: false
+    capabilities:
+      drop:
+        - ALL
+
+  # git-cdn 是内存吃紧的（每个 worker asyncio loop + gunicorn 主进程）
+  # 生产：CPU 4 / Mem 8G 单副本可扛 c=100 大仓并发（本地测过）
+  resources:
+    limits:
+      cpu: "4"
+      memory: 8Gi
+    requests:
+      cpu: "2"
+      memory: 4Gi
+
+  # git-cdn 的 healthz endpoint：GET /  (空路径)返 "ok"（源码 app.py 里）
+  # 也可以直接 GET /healthz — 但当前 v0.2.6 没这个 endpoint；用 / 更保险
+  livenessProbe:
+    httpGet:
+      path: /
+      port: 8000
+    initialDelaySeconds: 15
+    periodSeconds: 30
+    timeoutSeconds: 5
+    failureThreshold: 3
+
+  readinessProbe:
+    httpGet:
+      path: /
+      port: 8000
+    initialDelaySeconds: 5
+    periodSeconds: 10
+    timeoutSeconds: 3
+    failureThreshold: 3
+
+  # 额外环境变量（集群级定制）
+  # 常见项：
+  #   SENTRY_DSN               - 崩溃告警接入
+  #   LOGGING_SERVER           - JSON-over-UDP 日志汇聚
+  #   MAX_CONNECTIONS          - aiohttp connector 上限（默认 100，重压建议调高）
+  extraEnv: []
+  # 例：
+  # extraEnv:
+  #   - name: MAX_CONNECTIONS
+  #     value: "200"
+
+# --------------------------------------------------------------
+# 认证 —— git-cdn 强制要 Authorization 头，即便拉取公开仓库也一样。
+#
+# 三种典型接法（选一个）：
+#   1) 集群共享的 org PAT：secret 里塞 static token；所有 CI 用相同 PAT
+#      通过 valuesObject.pat.enabled=true + pat.tokenSecretName 让 pod-template
+#      写 gitconfig 时把 PAT 写进 URL basic-auth 部分
+#   2) 每个仓库自己的 GITHUB_TOKEN：runner 自身已经在 env 里有 token，
+#      通过在 pod-template initContainer 里用 $GITHUB_TOKEN 生成 gitconfig
+#      （见 examples/pod-template-init.yaml）
+#   3) GitHub App 分发 installation token：需要额外服务定期签发，超出本 chart 范围
+#
+# 该 chart 不管理 secret；secret 由每个集群单独维护，通常和 github-token-secret.yaml
+# 一样从 Vault 同步。参考 examples/git-cdn-pat-secret.yaml
+# --------------------------------------------------------------
+
+# PVC 用于存储 git 仓库 + pack cache
+persistence:
+  enabled: true
+  storageClassName: ""
+  accessMode: ReadWriteOnce
+  size: 200Gi
+  annotations: {}
+  # 多副本共享（华为云 SFS Turbo）时覆盖：
+  # storageClassName: csi-sfsturbo
+  # accessMode: ReadWriteMany
+  # annotations:
+  #   everest.io/path: /git-cdn-workdir
+  #   everest.io/sfsturbo-share-id: <your-share-id>
+  #   everest.io/volume-as: absolute-path
+
+service:
+  type: ClusterIP
+  port: 8000
+  protocol: TCP

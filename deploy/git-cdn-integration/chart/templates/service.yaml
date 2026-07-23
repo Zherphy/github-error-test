@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ .Values.proxy.appName }}-service
+  namespace: {{ .Values.namespace }}
+spec:
+  type: {{ .Values.service.type }}
+  ports:
+    - name: http
+      port: {{ .Values.service.port }}
+      protocol: {{ .Values.service.protocol }}
+      targetPort: {{ .Values.proxy.port }}
+  selector:
+    app: {{ .Values.proxy.appName }}

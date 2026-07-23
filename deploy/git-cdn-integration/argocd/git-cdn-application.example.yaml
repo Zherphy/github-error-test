@@ -1,0 +1,63 @@
+# argocd/clusters/{cluster}/git-cdn.yaml
+# ---------------------------------------------------------------------------
+# 部署到目标集群里的 git-cdn 服务。放到 ascend-ci-deployment 仓库对应集群目录后，
+# ArgoCD 自动从 manifests/git-cdn/chart 拉 Helm chart 应用。
+#
+# 复制到 ascend-ci-deployment 仓库：
+#   cp git-cdn.yaml <ascend-ci-deployment-repo>/argocd/clusters/<cluster>/
+# 然后按每个集群修改 destination.name / project 两个字段（跟同目录下现有 Application 保持一致）
+# ---------------------------------------------------------------------------
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  # 命名规则：git-cdn-<cluster-shortname>，与现有 smart-git-proxy-<cluster> 对齐
+  name: git-cdn-gy-005
+  namespace: argocd
+spec:
+  destination:
+    # 复用 smart-git-proxy 已经证明可用的目标 namespace 结构（每集群独立 ns）
+    # 若同集群同时跑 git-cdn 和 smart-git-proxy 灰度对比，两者用不同 ns 隔离
+    namespace: git-cdn
+    # 集群名必须与 argocd 里已注册的 cluster 名一致；参考同目录下其他 Application
+    name: openmerlin-guiyang-005-cluster
+  project: openmerlin-guiyang-005-cluster
+  source:
+    path: manifests/git-cdn/chart
+    repoURL: https://github.com/opensourceways/ascend-ci-deployment.git
+    targetRevision: HEAD
+    helm:
+      releaseName: git-cdn
+      # 集群级差异化配置放这里；chart 里 values.yaml 提供默认
+      valuesObject:
+        proxy:
+          # 华为云 SFS Turbo 集群可选升 4 副本；单机 CPU 弱建议保持 1
+          replicaCount: 1
+          # gunicorn worker 数：CPU 8+ 推 4；CPU 4 推 2
+          gunicornWorker: 4
+          # 重试策略：内建的 aiohttp 10 次 + git 命令 5 次已经是激进配置；
+          # 生产可以降到 5 + 3 加快失败反馈
+          requestMaxRetries: "10"
+          backoffStart: "0.5"
+          backoffCount: "5"
+          # pack cache 大小：按活跃仓库总量 × 2 估。sglang + vllm-ascend 加起来 3G，20G 完全够
+          packCacheSizeGb: "20"
+          # 如果这个集群同时在跑 smart-git-proxy 的话建议加下面这行避免 ns 冲突
+          # 已经在 chart 里通过 namespace 字段隔离
+        persistence:
+          enabled: true
+          # 与 smart-git-proxy 保持一致的存储配置，方便运维统一管理
+          storageClassName: "sfsturbo-subpath-sc"
+          accessMode: ReadWriteMany
+          size: 200Gi
+  syncPolicy:
+    automated:
+      prune: true
+    syncOptions:
+      - CreateNamespace=true
+      - ApplyOutOfSyncOnly=true
+    retry:
+      limit: 3
+      backoff:
+        duration: 10s
+        factor: 2
+        maxDuration: 3m

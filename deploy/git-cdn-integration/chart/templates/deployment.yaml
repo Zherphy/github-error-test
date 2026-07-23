@@ -1,0 +1,89 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ .Values.proxy.appName }}
+  namespace: {{ .Values.namespace }}
+  labels:
+    app: {{ .Values.proxy.appName }}
+spec:
+  replicas: {{ .Values.proxy.replicaCount }}
+  # 只用 Recreate 策略 —— PVC 是 RWO 时 RollingUpdate 会因为新 Pod 抢不到 volume 卡住
+  # RWX 场景可改成 RollingUpdate（在 valuesObject 里覆盖）
+  strategy:
+    type: Recreate
+  selector:
+    matchLabels:
+      app: {{ .Values.proxy.appName }}
+  template:
+    metadata:
+      labels:
+        app: {{ .Values.proxy.appName }}
+    spec:
+      nodeSelector:
+        kubernetes.io/arch: amd64
+      serviceAccountName: {{ .Values.serviceAccount.name }}
+      {{- if .Values.image.pullSecret }}
+      imagePullSecrets:
+      - name: {{ .Values.image.pullSecret }}
+      {{- end }}
+      automountServiceAccountToken: false
+      containers:
+        - name: {{ .Values.proxy.appName }}
+          image: {{ .Values.proxy.image.repository }}:{{ .Values.proxy.image.tag | default .Chart.AppVersion }}
+          imagePullPolicy: {{ .Values.proxy.image.pullPolicy }}
+          env:
+            # ---- 必须字段 ----
+            - name: GITSERVER_UPSTREAM
+              value: {{ .Values.proxy.upstream | quote }}
+            - name: WORKING_DIRECTORY
+              value: "/workdir"
+            # ---- 性能字段 ----
+            - name: GUNICORN_WORKER
+              value: {{ .Values.proxy.gunicornWorker | quote }}
+            - name: PACK_CACHE_SIZE_GB
+              value: {{ .Values.proxy.packCacheSizeGb | quote }}
+            # ---- 重试字段（这是 git-cdn vs smart-git-proxy 的关键差异化）----
+            - name: REQUEST_MAX_RETRIES
+              value: {{ .Values.proxy.requestMaxRetries | quote }}
+            - name: BACKOFF_START
+              value: {{ .Values.proxy.backoffStart | quote }}
+            - name: BACKOFF_COUNT
+              value: {{ .Values.proxy.backoffCount | quote }}
+            {{- with .Values.proxy.extraEnv }}
+            {{- toYaml . | nindent 12 }}
+            {{- end }}
+          ports:
+            - name: http
+              containerPort: {{ .Values.proxy.port }}
+              protocol: TCP
+          {{- with .Values.proxy.livenessProbe }}
+          livenessProbe:
+            {{- toYaml . | nindent 12 }}
+          {{- end }}
+          {{- with .Values.proxy.readinessProbe }}
+          readinessProbe:
+            {{- toYaml . | nindent 12 }}
+          {{- end }}
+          {{- with .Values.proxy.resources }}
+          resources:
+            {{- toYaml . | nindent 12 }}
+          {{- end }}
+          {{- with .Values.proxy.securityContext }}
+          securityContext:
+            {{- toYaml . | nindent 12 }}
+          {{- end }}
+          volumeMounts:
+            - name: workdir
+              mountPath: /workdir
+            - name: tmp
+              mountPath: /tmp
+      volumes:
+        - name: workdir
+          {{- if .Values.persistence.enabled }}
+          persistentVolumeClaim:
+            claimName: {{ .Values.proxy.appName }}-workdir
+          {{- else }}
+          emptyDir: {}
+          {{- end }}
+        - name: tmp
+          emptyDir: {}

@@ -1,0 +1,88 @@
+# pod-template-init-snippet.yaml
+# ---------------------------------------------------------------------------
+# 展示 CI job 的 pod-template 如何切到 git-cdn（对比之前 smart-git-proxy 的写法）
+#
+# 定位：这不是一个可直接 kubectl apply 的完整文件，而是 ConfigMap 里 default.yaml 段
+# 的 diff 示例，用来把 <cluster>/config/container-job-pod-template-*.yaml 里的
+# postStart lifecycle 从 smart-git-proxy 切到 git-cdn。
+#
+# 对齐仓库里现有的写法：
+#   other/ascend-gha-runners/vllm-ascend/config-for-guiyang-005/linux-aarch64-a3-2-configmap.yaml
+#   projects/sgl-project/sglang/config/container-job-pod-template-npu-2-configmap.yaml
+# ---------------------------------------------------------------------------
+
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: pod-template-npu-1
+  namespace: ascend-gha-runners
+data:
+  default.yaml: |
+    ---
+    apiVersion: v1
+    kind: PodTemplate
+    metadata:
+      annotations:
+        liqo.io/api-server-support: "remote"
+      labels:
+        ascend-ci.com/npu-count: "1"
+    spec:
+      # ... 你原有 spec 保留 ...
+      containers:
+        - name: $job
+          # 模式 A：用集群共享 PAT secret（推荐 —— 与仓库现有 github-token-secret.yaml 模式一致）
+          env:
+            - name: GIT_CDN_PAT
+              valueFrom:
+                secretKeyRef:
+                  name: git-cdn-pat
+                  key: token
+          # 现有的 postStart 只写 gitconfig，切到 git-cdn 只需改 URL：
+          lifecycle:
+            postStart:
+              exec:
+                command:
+                  - /bin/sh
+                  - -c
+                  - |
+                    # ==== 从 smart-git-proxy 切到 git-cdn 的关键改动 ====
+                    # 旧写法（smart-git-proxy 走 URL 前缀重写）：
+                    #   [url "http://smart-git-proxy-service.smart-git-proxy.svc.cluster.local:8080/github.com/"]
+                    #       insteadOf = https://github.com/
+                    #
+                    # 新写法（git-cdn 要 BasicAuth；PAT 放 URL user:pass 部分）：
+                    cat <<EOF >> /root/.gitconfig
+                    [url "http://x-access-token:${GIT_CDN_PAT}@git-cdn-service.git-cdn.svc.cluster.local:8000/"]
+                        insteadOf = https://github.com/
+                    EOF
+                    # 说明：
+                    # 1) git-cdn 强制 Authorization 头 → PAT 必须写进 URL 或用 http.extraHeader
+                    # 2) git-cdn 的 GITSERVER_UPSTREAM 已配为 https://github.com/，所以
+                    #    /owner/repo.git 会被直接转发到 github.com
+                    # 3) 客户端 git 会自动把 http URL 里的 basic-auth 转成 Authorization 头
+                    # 4) 如果你不放心 PAT 出现在 process env 里，用 extraHeader 版本（下方 B）
+                    #
+                    # ==== 模式 B：用 GITHUB_TOKEN + extraHeader（避免 PAT 出现在 URL 里）====
+                    # 前提：pod 里已经有 GITHUB_TOKEN 环境变量（actions-runner 自动注入）
+                    # AUTH=$(echo -n "x-access-token:${GITHUB_TOKEN}" | base64 -w0)
+                    # cat <<EOF >> /root/.gitconfig
+                    # [url "http://git-cdn-service.git-cdn.svc.cluster.local:8000/"]
+                    #     insteadOf = https://github.com/
+                    # [http "http://git-cdn-service.git-cdn.svc.cluster.local:8000/"]
+                    #     extraheader = Authorization: basic ${AUTH}
+                    # EOF
+                    #
+                    # ==== 后续 NPU 检查等既有逻辑保持不动 ====
+                    timeout=300
+                    start_time=$SECONDS
+                    if [ -c "/dev/davinci_manager" ]; then
+                      while true; do
+                          if npu-smi info &> /dev/null; then break; fi
+                          sleep 1
+                          elapsed=$(($SECONDS - $start_time))
+                          if [ $elapsed -ge $timeout ]; then
+                            echo "NPU check timed out after $timeout seconds" >&2
+                            exit 1
+                          fi
+                      done
+                    fi
